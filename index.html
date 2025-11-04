@@ -425,6 +425,308 @@
     </section>
     <!-- ---------- ADOPTION ENDS ---------- -->
 
+    <!-- ---------- DONATION SECTION (DARI KODE ANDA) ---------- -->
+
+<!-- 1. HERO SECTION  -->
+<!-- 1. HERO SECTION (Perbaikan Final - Gambar Full Pojok Kanan) -->
+<section
+  id="donationPageHero"
+  class="pt-16 lg:pt-0 hero-whiskey-style bg-soft-blue lg:min-h-[550px]"
+>
+  
+  <div
+    class="flex flex-col lg:flex-row justify-center items-center w-full h-full lg:h-[550px]"
+  >
+    
+    <div
+      class="w-full lg:w-1/2 z-10 text-center lg:text-left py-12 lg:py-0 flex justify-center lg:justify-end"
+    >
+      
+      <div class="max-w-lg lg:mr-16 px-6 lg:px-0 pb-12 lg:pb-0">
+        <h1 class="text-6xl mb-2 headerTxt700 title-whiskey">
+          Donate
+        </h1>
+        <h2 class="subheaderTxt font-semibold lg:text-2xl mb-4">
+          Setiap Hari Ada Kumis yang Butuh Uluran Tanganmu
+        </h2>
+        <p class="bodyTxt lg:text-md max-w-sm mx-auto lg:max-w-full mb-8">
+          Di Whiskey Shelter, kami menyelamatkan kucing jalanan yang
+          kehilangan tempat tinggal, memberi makan, perawatan, dan kasih
+          sayang. Dengan donasimu, kamu membantu mereka mendapatkan
+          rumah dan harapan baru.
+        </p>
+        <div class="flex justify-center lg:justify-start gap-4 pt-2">
+          <button
+            id="donate_btnDonateHero"
+            class="btn-green font-semibold px-6 py-2 rounded-full shadow-lg"
+          >
+            Donate
+          </button>
+          <button
+            onclick="window.location.href='contact.html'"
+            class="btn-outline-green font-semibold px-6 py-2 rounded-full"
+          >
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div
+      class="w-full lg:w-1/2 h-[400px] lg:h-full bg-cover bg-center"
+      style="background-image: url('img/poorcat.jpg')"
+    ></div>
+  </div>
+</section>
+
+
+
+<!-- 2. IMPACT COUNTER SECTION -->
+<section class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="headerTxt700 text-3xl mb-6 text-dark-blue">
+      Dampak Nyata dari Setiap Donasimu 🐾
+    </h2>
+    <p class="bodyTxt text-lg mb-12 max-w-2xl mx-auto">
+      Bersama para donatur, Whiskey Shelter telah membantu ratusan kucing
+      jalanan mendapatkan makanan, tempat tinggal, dan kasih sayang yang layak.
+    </p>
+    <!-- Kolom Dampak -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <!-- Card 1 -->
+      <div class="bg-soft-pink p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+        <h3 class="headerTxt700 text-5xl mb-2 text-dark-blue">500+</h3>
+        <p class="subheaderTxt font-semibold text-xl lg:text-2xl mb-4">
+          Kucing Diselamatkan
+        </p>
+        <p class="bodyTxt lg:text-md max-w-sm mx-auto lg:max-w-full mb-8">
+          Kucing terlantar kini mendapatkan rumah baru dan perawatan penuh
+          cinta.
+        </p>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-soft-blue p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+        <h3 class="headerTxt700 text-5xl mb-2 text-dark-blue">3.000+</h3>
+        <p class="subheaderTxt font-semibold text-xl lg:text-2xl mb-4">
+          Porsi Makanan Tiap Bulan
+        </p>
+        <p class="bodyTxt lg:text-md max-w-sm mx-auto lg:max-w-full mb-8">
+          Setiap rupiah donasimu membantu menyediakan makanan bergizi untuk para
+          kucing shelter.
+        </p>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-soft-yellow p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+        <h3 class="headerTxt700 text-5xl mb-2 text-dark-blue">20+</h3>
+        <p class="subheaderTxt font-semibold text-xl lg:text-2xl mb-4">
+          Shelter Aktif
+        </p>
+        <p class="bodyTxt lg:text-md max-w-sm mx-auto lg:max-w-full mb-8">
+          Kami bermitra dengan puluhan tempat penampungan di berbagai kota untuk
+          membantu lebih banyak kucing.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. DONATION FORM SECTION  -->
+<section class="pb-16 donation-process-section" id="donationFormSection">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <h2 class="headerTxt700 text-3xl mb-4">Dukung Misi Kami</h2>
+    <p class="bodyTxt text-lg mb-8">
+      Pilih jumlah donasi Anda di bawah atau masukkan jumlah kustom. Setiap
+      rupiah sangat berharga untuk makanan, perawatan medis, dan tempat
+      tinggal.
+    </p>
+
+    <!-- Pilihan Nominal Donasi -->
+    <div class="flex flex-wrap justify-center gap-4 mb-8" id="donate_donationOptions">
+      <button
+        data-amount="100000"
+        class="option-btn btn-outline-green border-2 px-6 py-3 rounded-full font-semibold text-lg hover:shadow-lg transition duration-300"
+      >
+        Rp 100.000
+      </button>
+      <button
+        data-amount="200000"
+        class="option-btn btn-outline-green border-2 px-6 py-3 rounded-full font-semibold text-lg hover:shadow-lg transition duration-300"
+      >
+        Rp 200.000
+      </button>
+      <button
+        data-amount="500000"
+        class="option-btn btn-outline-green border-2 px-6 py-3 rounded-full font-semibold text-lg hover:shadow-lg transition duration-300"
+      >
+        Rp 500.000
+      </button>
+    </div>
+
+    <!-- Input Jumlah Kustom  -->
+    <div class="mb-8">
+      <label for="donate_customAmount" class="bodyTxt block text-lg mb-2"
+        >Atau masukkan jumlah kustom:</label
+      >
+      <input
+        type="number"
+        id="donate_customAmount"
+        placeholder="Contoh: 75000"
+        min="10000"
+        class="w-full max-w-sm p-3 border-2 border-gray-300 rounded-lg text-xl text-center focus:border-green focus:ring focus:ring-green focus:ring-opacity-50 transition duration-150"
+      />
+    </div>
+
+    <!-- Ringkasan & Metode Pembayaran  -->
+    <div class="bg-white p-6 rounded-xl shadow-2xl border border-gray-200">
+      <h3 class="headerTxt400 text-2xl mb-4">Total Donasi Anda:</h3>
+      <p class="headerTxt700 text-4xl mb-6 text-green" id="donate_donationSummary">
+        Rp 0
+      </p>
+
+      <h3 class="headerTxt400 text-xl mb-4">Pilih Metode Pembayaran:</h3>
+      <div class="flex justify-center gap-4 flex-wrap" id="donate_paymentButtonsContainer">
+        <button class="donate-payment-btn btn-outline-green border px-4 py-2 rounded-lg" data-method="BCA">
+          BCA
+        </button>
+        <button class="donate-payment-btn btn-outline-green border px-4 py-2 rounded-lg" data-method="MANDIRI">
+          Mandiri
+        </button>
+        <button class="donate-payment-btn btn-outline-green border px-4 py-2 rounded-lg" data-method="OVO">
+          OVO/Gopay
+        </button>
+      </div>
+      <p id="donate_paymentMethodSummary" class="bodyTxt mt-4 text-gray-600">
+        Metode dipilih: -
+      </p>
+
+      <button
+        id="donate_btnCheckoutFinal"
+        class="btn-green font-bold px-8 py-3 rounded-full mt-8 w-full transition duration-300 disabled:opacity-100"
+        disabled
+      >
+        Lanjutkan Pembayaran
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- 4. JAVASCRIPT KHUSUS DONASI  -->
+<script>
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    
+    const donate_customAmountInput = document.getElementById('donate_customAmount');
+    const donate_donationOptions = document.getElementById('donate_donationOptions');
+    const donate_donationSummary = document.getElementById('donate_donationSummary');
+    const donate_paymentMethodSummary = document.getElementById('donate_paymentMethodSummary');
+    const donate_paymentButtonsContainer = document.getElementById('donate_paymentButtonsContainer');
+    const donate_paymentButtons = donate_paymentButtonsContainer.querySelectorAll('.donate-payment-btn');
+    const donate_btnCheckoutFinal = document.getElementById('donate_btnCheckoutFinal');
+    const donate_btnDonateHero = document.getElementById('donate_btnDonateHero');
+
+    let donate_currentAmount = 0;
+    let donate_currentMethod = '';
+
+    const donate_formatRupiah = (amount) => {
+      return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        minimumFractionDigits: 0
+      }).format(amount);
+    };
+
+    const donate_updateCheckoutButton = () => {
+      if (donate_currentAmount > 0 && donate_currentMethod) {
+        donate_btnCheckoutFinal.disabled = false;
+      } else {
+        donate_btnCheckoutFinal.disabled = true;
+      }
+    };
+
+    const donate_updateAmount = (newAmount) => {
+      donate_currentAmount = newAmount;
+      if (donate_donationSummary) {
+        donate_donationSummary.textContent = donate_formatRupiah(donate_currentAmount);
+      }
+
+      document.querySelectorAll('#donate_donationOptions .option-btn').forEach(btn => {
+        btn.classList.remove('btn-green', 'border-green');
+        btn.classList.add('btn-outline-green');
+      });
+
+      donate_updateCheckoutButton();
+    };
+
+    if (donate_donationOptions) {
+      donate_donationOptions.addEventListener('click', (e) => {
+        if (e.target.classList.contains('option-btn')) {
+          const amount = parseInt(e.target.dataset.amount);
+          donate_updateAmount(amount);
+          if (donate_customAmountInput) {
+            donate_customAmountInput.value = '';
+          }
+          e.target.classList.remove('btn-outline-green');
+          e.target.classList.add('btn-green', 'border-green');
+        }
+      });
+    }
+
+    if (donate_customAmountInput) {
+      donate_customAmountInput.addEventListener('input', (e) => {
+        let amount = parseInt(e.target.value) || 0;
+        if (amount < 10000 && amount !== 0) {
+          amount = 10000;
+          e.target.value = 10000;
+        }
+        donate_updateAmount(amount);
+      });
+    }
+
+    if (donate_paymentButtons) {
+      donate_paymentButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          donate_currentMethod = button.dataset.method;
+          if (donate_paymentMethodSummary) {
+            donate_paymentMethodSummary.textContent = 'Metode dipilih: ' + donate_currentMethod;
+          }
+
+          donate_paymentButtons.forEach(btn => {
+            btn.classList.remove('btn-green');
+            btn.classList.add('btn-outline-green');
+          });
+          button.classList.remove('btn-outline-green');
+          button.classList.add('btn-green');
+
+          donate_updateCheckoutButton();
+        });
+      });
+    }
+    
+    if (donate_btnDonateHero) {
+      donate_btnDonateHero.addEventListener('click', () => {
+          document.getElementById('donationFormSection').scrollIntoView({ 
+              behavior: 'smooth' 
+          });
+      });
+    }
+
+    if (donate_btnCheckoutFinal) {
+      donate_btnCheckoutFinal.addEventListener('click', () => {
+        if (donate_currentAmount > 0 && donate_currentMethod) {
+          alert('Anda akan melanjutkan donasi sebesar ' + donate_formatRupiah(donate_currentAmount) + ' menggunakan ' + donate_currentMethod + '. Terima kasih atas kebaikan Anda!');
+        }
+      });
+    }
+
+    if (donate_donationSummary) {
+        donate_donationSummary.textContent = donate_formatRupiah(0);
+    }
+  });
+</script>
+
+<!-- ---------- DONATION SECTION ENDS ---------- -->
+
     <!-- ---------- FOOTER ---------- -->
     <footer class="pt-6 pb-8 px-6">
       <div class="flex justify-center w-full">
