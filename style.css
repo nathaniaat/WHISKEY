@@ -76,6 +76,12 @@ header {
   background-color: var(--soft-blue);
   overflow: hidden;
 }
+
+footer {
+  display: flex;
+  background-color: var(--soft-blue);
+}
+
 @media (max-width: 1024px) {
   header {
     height: auto;
