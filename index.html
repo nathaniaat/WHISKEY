@@ -45,57 +45,59 @@
     </nav>
 
     <!-- ---------- HEADER SECTION ---------- -->
-    <header class="pt-16 lg:pt-0 px-4 lg:px-2" id="header">
-      <div class="flex flex-col lg:flex-row justify-center items-center w-full">
-        <div class="w-full lg:w-2/3 lg:mr-16 max-w-lg lg:ml-8">
-          <img
-            src="img/Whiskey.png"
-            alt="Whiskey"
-            class="h-16 lg:h-auto w-auto mx-auto lg:mx-0"
-          />
-          <h2 class="headerTxt400 text-xl lg:text-2xl lg:text-start mb-6">
-            The Key To Every Cat’s Whisker
-          </h2>
-          <p
-            class="bodyTxt lg:text-md max-w-sm mx-auto lg:max-w-full text-center lg:text-start mb-3"
-          >
-            Karena setiap kumis pantas punya tempat untuk bersandar dan bermain
-            dengan damai.
-          </p>
+    <section id="header">
+      <header class="pt-16 lg:pt-0 px-4 lg:px-2">
+        <div class="flex flex-col lg:flex-row justify-center items-center w-full">
+          <div class="w-full lg:w-2/3 lg:mr-16 max-w-lg lg:ml-8">
+            <img
+              src="img/Whiskey.png"
+              alt="Whiskey"
+              class="h-16 lg:h-auto w-auto mx-auto lg:mx-0"
+            />
+            <h2 class="headerTxt400 text-xl lg:text-2xl lg:text-start mb-6">
+              The Key To Every Cat’s Whisker
+            </h2>
+            <p
+              class="bodyTxt lg:text-md max-w-sm mx-auto lg:max-w-full text-center lg:text-start mb-3"
+            >
+              Karena setiap kumis pantas punya tempat untuk bersandar dan bermain
+              dengan damai.
+            </p>
 
-          <div class="flex justify-center lg:justify-start gap-3 pt-2">
-            <a
-              href="#donationFormSection"
-              class="inline-block btn-green font-semibold px-6 py-2 rounded-full shadow-md"
-            >
-              Donate
-            </a>
-            <a
-              href="#adoptPage"
-              class="inline-block btn-outline-green font-semibold px-6 py-2 rounded-full"
-            >
-              Adopt
-            </a>
+            <div class="flex justify-center lg:justify-start gap-3 pt-2">
+              <a
+                href="#donationFormSection"
+                class="inline-block btn-green font-semibold px-6 py-2 rounded-full shadow-md"
+              >
+                Donate
+              </a>
+              <a
+                href="#adoptPage"
+                class="inline-block btn-outline-green font-semibold px-6 py-2 rounded-full"
+              >
+                Adopt
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="mt-8 lg:mt-0 lg:px-0 flex justify-center lg:justify-end w-full h-full self-end lg:w-1/3"
+          >
+            <img
+              src="img/header_cat.png"
+              alt="Whiskey the cat"
+              class="block w-full max-w-md mx-auto h-auto lg:w-auto lg:max-w-2xl object-cover"
+              class="block mx-auto h-auto lg:h-full lg:w-auto object-cover"
+            />
           </div>
         </div>
-
-        <div
-          class="mt-8 lg:mt-0 lg:px-0 flex justify-center lg:justify-end w-full h-full self-end lg:w-1/3"
-        >
-          <img
-            src="img/header_cat.png"
-            alt="Whiskey the cat"
-            class="block w-full max-w-md mx-auto h-auto lg:w-auto lg:max-w-2xl object-cover"
-            class="block mx-auto h-auto lg:h-full lg:w-auto object-cover"
-          />
-        </div>
-      </div>
-    </header>
+      </header>
+    </section>
     <script src="script.js"></script>
     <!--HEADER ENDS-->
 
     <!--ABOUT US SECTION-->
-    <div class="pt-16 px-8 lg:px-2" id="aboutUs">
+    <section class="pt-16 px-8 lg:px-2" id="aboutUsPage">
       <h1 class="headerTxt700 text-4xl text-center mt-6 mb-8">About Us</h1>
       <div
         class="flex flex-col lg:flex-row justify-center items-center w-full mb-16"
@@ -211,12 +213,12 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!--ABOUT US ENDS-->
 
     <!-- ---------- ADOPTION SECTION ---------- -->
     <section
-      id="adoptPage"
+      id="adoptionPage"
       class="bg-super-soft-blue w-full py-16 px-6 lg:px-12"
     >
       <div class="max-w-6xl mx-auto">
@@ -431,208 +433,203 @@
     <!-- ---------- ADOPTION ENDS ---------- -->
 
     <!-- ---------- DONATION SECTION ---------- -->
+    
+    <section id="donationPage">
+      <!-- 1. HERO SECTION  -->
+      <section id="donationPageHero" class="pt-16 lg:pt-0 hero-whiskey-style bg-soft-blue lg:min-h-[550px]">
+        <div class="flex flex-col lg:flex-row justify-center items-center w-full h-full lg:h-[550px]">
+          <div class="w-full lg:w-1/2 z-10 text-center lg:text-left py-12 lg:py-0 flex justify-center lg:justify-end">
+            <div class="max-w-lg lg:mr-16 px-6 lg:px-0 pb-12 lg:pb-0">
+              <h1 class="text-6xl mb-2 headerTxt700 title-whiskey">Donate</h1>
+              <h2 class="subheaderTxt font-semibold lg:text-2xl mb-4">
+                Setiap Hari Ada Kumis yang Butuh Uluran Tanganmu
+              </h2>
+              <p class="bodyTxt lg:text-md max-w-sm mx-auto lg:max-w-full mb-8">
+                Di Whiskey Shelter, kami menyelamatkan kucing jalanan yang
+                kehilangan tempat tinggal, memberi makan, perawatan, dan kasih
+                sayang. Dengan donasimu, kamu membantu mereka mendapatkan rumah
+                dan harapan baru.
+              </p>
+              <div class="flex justify-center lg:justify-start gap-4 pt-2">
+                <button
+                  id="donate_btnDonateHero"
+                  class="btn-green font-semibold px-6 py-2 rounded-full shadow-lg"
+                >
+                  Donate
+                </button>
+                <button
+                  onclick="window.location.href='contact.html'"
+                  class="btn-outline-green font-semibold px-6 py-2 rounded-full"
+                >
+                  Contact Us
+                </button>
+              </div>
+            </div>
+          </div>
 
-    <!-- 1. HERO SECTION  -->
-    <section
-      id="donationPageHero"
-      class="pt-16 lg:pt-0 hero-whiskey-style bg-soft-blue lg:min-h-[550px]"
-    >
-      <div
-        class="flex flex-col lg:flex-row justify-center items-center w-full h-full lg:h-[550px]"
-      >
-        <div
-          class="w-full lg:w-1/2 z-10 text-center lg:text-left py-12 lg:py-0 flex justify-center lg:justify-end"
-        >
-          <div class="max-w-lg lg:mr-16 px-6 lg:px-0 pb-12 lg:pb-0">
-            <h1 class="text-6xl mb-2 headerTxt700 title-whiskey">Donate</h1>
-            <h2 class="subheaderTxt font-semibold lg:text-2xl mb-4">
-              Setiap Hari Ada Kumis yang Butuh Uluran Tanganmu
-            </h2>
-            <p class="bodyTxt lg:text-md max-w-sm mx-auto lg:max-w-full mb-8">
-              Di Whiskey Shelter, kami menyelamatkan kucing jalanan yang
-              kehilangan tempat tinggal, memberi makan, perawatan, dan kasih
-              sayang. Dengan donasimu, kamu membantu mereka mendapatkan rumah
-              dan harapan baru.
-            </p>
-            <div class="flex justify-center lg:justify-start gap-4 pt-2">
-              <button
-                id="donate_btnDonateHero"
-                class="btn-green font-semibold px-6 py-2 rounded-full shadow-lg"
-              >
-                Donate
-              </button>
-              <button
-                onclick="window.location.href='contact.html'"
-                class="btn-outline-green font-semibold px-6 py-2 rounded-full"
-              >
-                Contact Us
-              </button>
+          <div
+            class="w-full lg:w-1/2 h-[400px] lg:h-full bg-cover bg-center"
+            style="background-image: url('img/poorcat.jpg')"
+          ></div>
+        </div>
+      </section>
+
+      <!-- 2. IMPACT COUNTER SECTION -->
+      <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+          <h2 class="headerTxt700 text-3xl mb-6 text-dark-blue">
+            Dampak Nyata dari Setiap Donasimu 🐾
+          </h2>
+          <p class="bodyTxt text-lg mb-12 max-w-2xl mx-auto">
+            Bersama para donatur, Whiskey Shelter telah membantu ratusan kucing
+            jalanan mendapatkan makanan, tempat tinggal, dan kasih sayang yang
+            layak.
+          </p>
+          <!-- Kolom Dampak -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Card 1 -->
+            <div
+              class="bg-soft-pink p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300"
+            >
+              <h3 class="headerTxt700 text-5xl mb-2 text-dark-blue">200+</h3>
+              <p class="subheaderTxt font-semibold text-xl lg:text-2xl mb-4">
+                Kucing Diselamatkan
+              </p>
+              <p class="bodyTxt lg:text-md max-w-sm mx-auto lg:max-w-full mb-8">
+                Kucing terlantar kini mendapatkan rumah baru dan perawatan penuh
+                cinta.
+              </p>
+            </div>
+            <!-- Card 2 -->
+            <div
+              class="bg-soft-blue p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300"
+            >
+              <h3 class="headerTxt700 text-5xl mb-2 text-dark-blue">3.000+</h3>
+              <p class="subheaderTxt font-semibold text-xl lg:text-2xl mb-4">
+                Porsi Makanan Tiap Bulan
+              </p>
+              <p class="bodyTxt lg:text-md max-w-sm mx-auto lg:max-w-full mb-8">
+                Setiap rupiah donasimu membantu menyediakan makanan bergizi untuk
+                para kucing shelter.
+              </p>
+            </div>
+            <!-- Card 3 -->
+            <div
+              class="bg-soft-yellow p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300"
+            >
+              <h3 class="headerTxt700 text-5xl mb-2 text-dark-blue">20+</h3>
+              <p class="subheaderTxt font-semibold text-xl lg:text-2xl mb-4">
+                Shelter Aktif
+              </p>
+              <p class="bodyTxt lg:text-md max-w-sm mx-auto lg:max-w-full mb-8">
+                Kami bermitra dengan puluhan tempat penampungan di berbagai kota
+                untuk membantu lebih banyak kucing.
+              </p>
             </div>
           </div>
         </div>
+      </section>
 
-        <div
-          class="w-full lg:w-1/2 h-[400px] lg:h-full bg-cover bg-center"
-          style="background-image: url('img/poorcat.jpg')"
-        ></div>
-      </div>
-    </section>
-
-    <!-- 2. IMPACT COUNTER SECTION -->
-    <section class="py-16 bg-white">
-      <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="headerTxt700 text-3xl mb-6 text-dark-blue">
-          Dampak Nyata dari Setiap Donasimu 🐾
-        </h2>
-        <p class="bodyTxt text-lg mb-12 max-w-2xl mx-auto">
-          Bersama para donatur, Whiskey Shelter telah membantu ratusan kucing
-          jalanan mendapatkan makanan, tempat tinggal, dan kasih sayang yang
-          layak.
-        </p>
-        <!-- Kolom Dampak -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-          <!-- Card 1 -->
-          <div
-            class="bg-soft-pink p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300"
-          >
-            <h3 class="headerTxt700 text-5xl mb-2 text-dark-blue">200+</h3>
-            <p class="subheaderTxt font-semibold text-xl lg:text-2xl mb-4">
-              Kucing Diselamatkan
-            </p>
-            <p class="bodyTxt lg:text-md max-w-sm mx-auto lg:max-w-full mb-8">
-              Kucing terlantar kini mendapatkan rumah baru dan perawatan penuh
-              cinta.
-            </p>
-          </div>
-          <!-- Card 2 -->
-          <div
-            class="bg-soft-blue p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300"
-          >
-            <h3 class="headerTxt700 text-5xl mb-2 text-dark-blue">3.000+</h3>
-            <p class="subheaderTxt font-semibold text-xl lg:text-2xl mb-4">
-              Porsi Makanan Tiap Bulan
-            </p>
-            <p class="bodyTxt lg:text-md max-w-sm mx-auto lg:max-w-full mb-8">
-              Setiap rupiah donasimu membantu menyediakan makanan bergizi untuk
-              para kucing shelter.
-            </p>
-          </div>
-          <!-- Card 3 -->
-          <div
-            class="bg-soft-yellow p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300"
-          >
-            <h3 class="headerTxt700 text-5xl mb-2 text-dark-blue">20+</h3>
-            <p class="subheaderTxt font-semibold text-xl lg:text-2xl mb-4">
-              Shelter Aktif
-            </p>
-            <p class="bodyTxt lg:text-md max-w-sm mx-auto lg:max-w-full mb-8">
-              Kami bermitra dengan puluhan tempat penampungan di berbagai kota
-              untuk membantu lebih banyak kucing.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. DONATION FORM SECTION  -->
-    <section class="pb-16 donation-process-section" id="donationFormSection">
-      <div class="max-w-3xl mx-auto px-4 text-center">
-        <h2 class="headerTxt700 text-3xl mb-4">Dukung Misi Kami</h2>
-        <p class="bodyTxt text-lg mb-8">
-          Pilih jumlah donasi Anda di bawah atau masukkan jumlah kustom. Setiap
-          rupiah sangat berharga untuk makanan, perawatan medis, dan tempat
-          tinggal.
-        </p>
-
-        <!-- Pilihan Nominal Donasi -->
-        <div
-          class="flex flex-wrap justify-center gap-4 mb-8"
-          id="donate_donationOptions"
-        >
-          <button
-            data-amount="100000"
-            class="option-btn btn-outline-green border-2 px-6 py-3 rounded-full font-semibold text-lg hover:shadow-lg transition duration-300"
-          >
-            Rp 100.000
-          </button>
-          <button
-            data-amount="200000"
-            class="option-btn btn-outline-green border-2 px-6 py-3 rounded-full font-semibold text-lg hover:shadow-lg transition duration-300"
-          >
-            Rp 200.000
-          </button>
-          <button
-            data-amount="500000"
-            class="option-btn btn-outline-green border-2 px-6 py-3 rounded-full font-semibold text-lg hover:shadow-lg transition duration-300"
-          >
-            Rp 500.000
-          </button>
-        </div>
-
-        <!-- Input Jumlah Kustom  -->
-        <div class="mb-8">
-          <label for="donate_customAmount" class="bodyTxt block text-lg mb-2"
-            >Atau masukkan jumlah kustom:</label
-          >
-          <input
-            type="number"
-            id="donate_customAmount"
-            placeholder="Contoh: 75000"
-            min="10000"
-            class="w-full max-w-sm p-3 border-2 border-gray-300 rounded-lg text-xl text-center focus:border-green focus:ring focus:ring-green focus:ring-opacity-50 transition duration-150"
-          />
-        </div>
-
-        <!-- Ringkasan & Metode Pembayaran  -->
-        <div class="bg-white p-6 rounded-xl shadow-2xl border border-gray-200">
-          <h3 class="headerTxt400 text-2xl mb-4">Total Donasi Anda:</h3>
-          <p
-            class="headerTxt700 text-4xl mb-6 text-green"
-            id="donate_donationSummary"
-          >
-            Rp 0
+      <!-- 3. DONATION FORM SECTION  -->
+      <section class="pb-16 donation-process-section" id="donationFormSection">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+          <h2 class="headerTxt700 text-3xl mb-4">Dukung Misi Kami</h2>
+          <p class="bodyTxt text-lg mb-8">
+            Pilih jumlah donasi Anda di bawah atau masukkan jumlah kustom. Setiap
+            rupiah sangat berharga untuk makanan, perawatan medis, dan tempat
+            tinggal.
           </p>
 
-          <h3 class="headerTxt400 text-xl mb-4">Pilih Metode Pembayaran:</h3>
+          <!-- Pilihan Nominal Donasi -->
           <div
-            class="flex justify-center gap-4 flex-wrap"
-            id="donate_paymentButtonsContainer"
+            class="flex flex-wrap justify-center gap-4 mb-8"
+            id="donate_donationOptions"
           >
             <button
-              class="donate-payment-btn btn-outline-green border px-4 py-2 rounded-lg"
-              data-method="BCA"
+              data-amount="100000"
+              class="option-btn btn-outline-green border-2 px-6 py-3 rounded-full font-semibold text-lg hover:shadow-lg transition duration-300"
             >
-              BCA
+              Rp 100.000
             </button>
             <button
-              class="donate-payment-btn btn-outline-green border px-4 py-2 rounded-lg"
-              data-method="MANDIRI"
+              data-amount="200000"
+              class="option-btn btn-outline-green border-2 px-6 py-3 rounded-full font-semibold text-lg hover:shadow-lg transition duration-300"
             >
-              Mandiri
+              Rp 200.000
             </button>
             <button
-              class="donate-payment-btn btn-outline-green border px-4 py-2 rounded-lg"
-              data-method="OVO"
+              data-amount="500000"
+              class="option-btn btn-outline-green border-2 px-6 py-3 rounded-full font-semibold text-lg hover:shadow-lg transition duration-300"
             >
-              OVO/Gopay
+              Rp 500.000
             </button>
           </div>
-          <p
-            id="donate_paymentMethodSummary"
-            class="bodyTxt mt-4 text-gray-600"
-          >
-            Metode dipilih: -
-          </p>
 
-          <button
-            id="donate_btnCheckoutFinal"
-            class="btn-green font-bold px-8 py-3 rounded-full mt-8 w-full transition duration-300 disabled:opacity-100"
-            disabled
-          >
-            Lanjutkan Pembayaran
-          </button>
+          <!-- Input Jumlah Kustom  -->
+          <div class="mb-8">
+            <label for="donate_customAmount" class="bodyTxt block text-lg mb-2"
+              >Atau masukkan jumlah kustom:</label
+            >
+            <input
+              type="number"
+              id="donate_customAmount"
+              placeholder="Contoh: 75000"
+              min="10000"
+              class="w-full max-w-sm p-3 border-2 border-gray-300 rounded-lg text-xl text-center focus:border-green focus:ring focus:ring-green focus:ring-opacity-50 transition duration-150"
+            />
+          </div>
+
+          <!-- Ringkasan & Metode Pembayaran  -->
+          <div class="bg-white p-6 rounded-xl shadow-2xl border border-gray-200">
+            <h3 class="headerTxt400 text-2xl mb-4">Total Donasi Anda:</h3>
+            <p
+              class="headerTxt700 text-4xl mb-6 text-green"
+              id="donate_donationSummary"
+            >
+              Rp 0
+            </p>
+
+            <h3 class="headerTxt400 text-xl mb-4">Pilih Metode Pembayaran:</h3>
+            <div
+              class="flex justify-center gap-4 flex-wrap"
+              id="donate_paymentButtonsContainer"
+            >
+              <button
+                class="donate-payment-btn btn-outline-green border px-4 py-2 rounded-lg"
+                data-method="BCA"
+              >
+                BCA
+              </button>
+              <button
+                class="donate-payment-btn btn-outline-green border px-4 py-2 rounded-lg"
+                data-method="MANDIRI"
+              >
+                Mandiri
+              </button>
+              <button
+                class="donate-payment-btn btn-outline-green border px-4 py-2 rounded-lg"
+                data-method="OVO"
+              >
+                OVO/Gopay
+              </button>
+            </div>
+            <p
+              id="donate_paymentMethodSummary"
+              class="bodyTxt mt-4 text-gray-600"
+            >
+              Metode dipilih: -
+            </p>
+
+            <button
+              id="donate_btnCheckoutFinal"
+              class="btn-green font-bold px-8 py-3 rounded-full mt-8 w-full transition duration-300 disabled:opacity-100"
+              disabled
+            >
+              Lanjutkan Pembayaran
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
     </section>
 
     <!-- 4. JAVASCRIPT KHUSUS DONASI  -->
@@ -777,9 +774,9 @@
     <!-- ---------- DONATION SECTION ENDS ---------- -->
 
     <!-- ---------- EDUCATION SECTION STARTS ---------- -->
-     <section id="educationPage" class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="flex flex-col items-center text-center mx-6">
+    <section id="educationPage" class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-col items-center text-center mx-6">
                 
 
           <div class="flex flex-col items-center text-center mx-6">
@@ -865,7 +862,8 @@
             </aside>  
           </div>
         </div>
-     </section>
+      </section>
+    </section> 
     <!-- ---------- EDUCATION SECTION ENDS ---------- -->
 
     <!-- ---------- FOOTER ---------- -->

@@ -1,25 +1,32 @@
 $(document).ready(function () {
-  const $navLinks = $(".nav-links");
+  const $sections = $(
+    "#header, #aboutUsPage, #adoptionPage, #donationPage, #educationPage"
+  );
 
-  $(".menu-icon").on("click", function () {
-    const $icon = $(this);
-    const currentName = $icon.attr("name");
-    $icon.attr("name", currentName === "menu" ? "close" : "menu");
-    $navLinks.toggleClass("top-[9%]");
-  });
+  function showSection(id) {
+    $sections.hide();
+    $(id).show();
+  }
 
   $("#homeNav").on("click", function () {
-    $("#aboutUs, #adoptPage").hide();
-    $("#header").show();
+    $sections.show();
   });
 
   $("#aboutNav").on("click", function () {
-    $("#header, #adoptPage").hide();
-    $("#aboutUs").show();
+    showSection("#aboutUsPage");
   });
 
   $("#adoptNav").on("click", function () {
-    $("#header, #aboutUs").hide();
-    $("#adoptPage").show();
+    showSection("#adoptionPage");
   });
+
+  $("#donateNav").on("click", function () {
+    showSection("#donationPage");
+  });
+
+  $("#eduNav").on("click", function () {
+    showSection("#educationPage");
+  });
+
+  $sections.show();
 });
