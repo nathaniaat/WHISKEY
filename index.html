@@ -15,32 +15,34 @@
   </head>
   <body>
     <!---------- NAVBAR SECTION ----------->
-    <nav class="flex justify-between items-center w-[92%] mx-auto py-3">
-      <!-- LOGO -->
-      <div>
-        <img class="w-32 cursor-pointer" src="img\Whiskey.png" alt="..." />
-      </div>
+    <nav class="fixed top-0 left-0 w-full bg-white z-50 shadow">
+      <div class="flex justify-between items-center w-[92%] mx-auto py-3">
+        <!-- LOGO -->
+        <div>
+          <img class="w-32 cursor-pointer" src="img\Whiskey.png" alt="..." />
+        </div>
 
-      <!-- MENU BAR -->
-      <div
-        class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 z-20"
-      >
-        <ul
-          class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-semibold text-blue-800"
+        <!-- MENU BAR -->
+        <div
+          class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 z-20"
         >
-          <li><a role="button" class="hover:text-blue-300" id="homeNav">Home</a></li>
-          <li><a role="button" class="hover:text-blue-300" id="aboutNav">About Us</a></li>
-          <li><a role="button" class="hover:text-blue-300" id="adoptNav">Adoption</a></li>
-          <li><a role="button" class="hover:text-blue-300" id="donateNav">Donation</a></li>
-          <li><a role="button" class="hover:text-blue-300" id="eduNav">Education</a></li>
-        </ul>
-      </div>
-      <div class="flex items-center gap-6 md:hidden">
-        <ion-icon
-          onclick="onToggleMenu(this)"
-          name="menu"
-          class="text-3xl cursor-pointer text-blue-800"
-        ></ion-icon>
+          <ul
+            class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-semibold text-blue-800"
+          >
+            <li><a role="button" class="hover:text-blue-300" id="homeNav">Home</a></li>
+            <li><a role="button" class="hover:text-blue-300" id="aboutNav">About Us</a></li>
+            <li><a role="button" class="hover:text-blue-300" id="adoptNav">Adoption</a></li>
+            <li><a role="button" class="hover:text-blue-300" id="donateNav">Donation</a></li>
+            <li><a role="button" class="hover:text-blue-300" id="eduNav">Education</a></li>
+          </ul>
+        </div>
+        <div class="flex items-center gap-6 md:hidden">
+          <ion-icon
+            onclick="onToggleMenu(this)"
+            name="menu"
+            class="text-3xl cursor-pointer text-blue-800"
+          ></ion-icon>
+        </div>
       </div>
     </nav>
 
