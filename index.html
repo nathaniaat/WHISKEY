@@ -428,7 +428,7 @@
               >Atau masukkan jumlah kustom:</label
             >
             <input
-              type="number"
+              type="text"
               id="donate_customAmount"
               placeholder="Contoh: 75000"
               min="10000"
@@ -491,146 +491,7 @@
       </section>
     </section>
 
-    <!-- 4. JAVASCRIPT KHUSUS DONASI  -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const donate_customAmountInput = document.getElementById(
-          "donate_customAmount"
-        );
-        const donate_donationOptions = document.getElementById(
-          "donate_donationOptions"
-        );
-        const donate_donationSummary = document.getElementById(
-          "donate_donationSummary"
-        );
-        const donate_paymentMethodSummary = document.getElementById(
-          "donate_paymentMethodSummary"
-        );
-        const donate_paymentButtonsContainer = document.getElementById(
-          "donate_paymentButtonsContainer"
-        );
-        const donate_paymentButtons =
-          donate_paymentButtonsContainer.querySelectorAll(
-            ".donate-payment-btn"
-          );
-        const donate_btnCheckoutFinal = document.getElementById(
-          "donate_btnCheckoutFinal"
-        );
-        const donate_btnDonateHero = document.getElementById(
-          "donate_btnDonateHero"
-        );
-
-        let donate_currentAmount = 0;
-        let donate_currentMethod = "";
-
-        const donate_formatRupiah = (amount) => {
-          return new Intl.NumberFormat("id-ID", {
-            style: "currency",
-            currency: "IDR",
-            minimumFractionDigits: 0,
-          }).format(amount);
-        };
-
-        const donate_updateCheckoutButton = () => {
-          if (donate_currentAmount > 0 && donate_currentMethod) {
-            donate_btnCheckoutFinal.disabled = false;
-          } else {
-            donate_btnCheckoutFinal.disabled = true;
-          }
-        };
-
-        const donate_updateAmount = (newAmount) => {
-          donate_currentAmount = newAmount;
-          if (donate_donationSummary) {
-            donate_donationSummary.textContent =
-              donate_formatRupiah(donate_currentAmount);
-          }
-
-          document
-            .querySelectorAll("#donate_donationOptions .option-btn")
-            .forEach((btn) => {
-              btn.classList.remove("btn-green", "border-green");
-              btn.classList.add("btn-outline-green");
-            });
-
-          donate_updateCheckoutButton();
-        };
-
-        if (donate_donationOptions) {
-          donate_donationOptions.addEventListener("click", (e) => {
-            if (e.target.classList.contains("option-btn")) {
-              const amount = parseInt(e.target.dataset.amount);
-              donate_updateAmount(amount);
-              if (donate_customAmountInput) {
-                donate_customAmountInput.value = "";
-              }
-              e.target.classList.remove("btn-outline-green");
-              e.target.classList.add("btn-green", "border-green");
-            }
-          });
-        }
-
-        if (donate_customAmountInput) {
-          donate_customAmountInput.addEventListener("input", (e) => {
-            let amount = parseInt(e.target.value) || 0;
-            if (amount < 10000 && amount !== 0) {
-              amount = 10000;
-              e.target.value = 10000;
-            }
-            donate_updateAmount(amount);
-          });
-        }
-
-        if (donate_paymentButtons) {
-          donate_paymentButtons.forEach((button) => {
-            button.addEventListener("click", () => {
-              donate_currentMethod = button.dataset.method;
-              if (donate_paymentMethodSummary) {
-                donate_paymentMethodSummary.textContent =
-                  "Metode dipilih: " + donate_currentMethod;
-              }
-
-              donate_paymentButtons.forEach((btn) => {
-                btn.classList.remove("btn-green");
-                btn.classList.add("btn-outline-green");
-              });
-              button.classList.remove("btn-outline-green");
-              button.classList.add("btn-green");
-
-              donate_updateCheckoutButton();
-            });
-          });
-        }
-
-        if (donate_btnDonateHero) {
-          donate_btnDonateHero.addEventListener("click", () => {
-            document.getElementById("donationFormSection").scrollIntoView({
-              behavior: "smooth",
-            });
-          });
-        }
-
-        if (donate_btnCheckoutFinal) {
-          donate_btnCheckoutFinal.addEventListener("click", () => {
-            if (donate_currentAmount > 0 && donate_currentMethod) {
-              alert(
-                "Anda akan melanjutkan donasi sebesar " +
-                  donate_formatRupiah(donate_currentAmount) +
-                  " menggunakan " +
-                  donate_currentMethod +
-                  ". Terima kasih atas kebaikan Anda!"
-              );
-            }
-          });
-        }
-
-        if (donate_donationSummary) {
-          donate_donationSummary.textContent = donate_formatRupiah(0);
-        }
-      });
-    </script>
-
-    <!-- ---------- DONATION SECTION ENDS ---------- -->
+   
 
     <!-- ---------- EDUCATION SECTION STARTS ---------- -->
     <section id="educationPage" class="py-16 bg-soft-pink pt-24 pb-24">

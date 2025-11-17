@@ -173,3 +173,129 @@ $(document).ready(function () {
     .removeClass("btn-outline-green")
     .addClass("btn-green");
 });
+
+$(document).ready(function () {
+  const $customAmount = $("#donate_customAmount");
+  const $donationOptions = $("#donate_donationOptions");
+  const $donationSummary = $("#donate_donationSummary");
+  const $paymentMethodSummary = $("#donate_paymentMethodSummary");
+  const $paymentButtons = $("#donate_paymentButtonsContainer .donate-payment-btn");
+  const $btnCheckout = $("#donate_btnCheckoutFinal");
+  const $btnDonateHero = $("#donate_btnDonateHero");
+
+  let currentAmount = 0;
+  let currentMethod = "";
+
+  const formatRupiah = (amount) => {
+    return new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      minimumFractionDigits: 0,
+    }).format(amount);
+  };
+
+  const updateCheckoutButton = () => {
+    $btnCheckout.prop("disabled", !(currentAmount > 0 && currentMethod));
+  };
+
+  const updateAmount = (newAmount) => {
+    currentAmount = newAmount;
+
+    if ($donationSummary.length) {
+      $donationSummary.text(formatRupiah(currentAmount));
+    }
+
+    $("#donate_donationOptions .option-btn")
+      .removeClass("btn-green border-green")
+      .addClass("btn-outline-green");
+
+    updateCheckoutButton();
+  };
+
+  // --- Click preset donation buttons ---
+  if ($donationOptions.length) {
+    $donationOptions.on("click", ".option-btn", function () {
+      const amount = parseInt($(this).data("amount"));
+      updateAmount(amount);
+
+      if ($customAmount.length) $customAmount.val("");
+
+      $(this)
+        .removeClass("btn-outline-green")
+        .addClass("btn-green border-green");
+    });
+  }
+
+  // --- Custom input donation ---
+if ($customAmount.length) {
+  $customAmount.on("input", function () {
+    // Ambil value, buang semua karakter kecuali angka
+    let raw = $(this).val().replace(/[^0-9]/g, "");
+
+    // Kalau kosong, set amount = 0 dan clear display
+    if (!raw) {
+      updateAmount(0);
+      $(this).val("");
+      return;
+    }
+
+    // Convert ke integer
+    let amount = parseInt(raw);
+
+    // Update amount ke summary
+    updateAmount(amount);
+
+    // Format tampilan dengan titik ribuan
+    $(this).val(amount.toLocaleString("id-ID"));
+  });
+}
+
+
+  // --- Payment buttons ---
+  if ($paymentButtons.length) {
+    $paymentButtons.on("click", function () {
+      currentMethod = $(this).data("method");
+
+      $paymentMethodSummary.text("Metode dipilih: " + currentMethod);
+
+      $paymentButtons
+        .removeClass("btn-green")
+        .addClass("btn-outline-green");
+
+      $(this)
+        .removeClass("btn-outline-green")
+        .addClass("btn-green");
+
+      updateCheckoutButton();
+    });
+  }
+
+  // --- Scroll to form ---
+  if ($btnDonateHero.length) {
+    $btnDonateHero.on("click", function () {
+      $("#donationFormSection")[0].scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  }
+
+  // --- Final checkout button ---
+  if ($btnCheckout.length) {
+    $btnCheckout.on("click", function () {
+      if (currentAmount > 0 && currentMethod) {
+        alert(
+          "Anda akan melanjutkan donasi sebesar " +
+            formatRupiah(currentAmount) +
+            " menggunakan " +
+            currentMethod +
+            ". Terima kasih atas kebaikan Anda!"
+        );
+      }
+    });
+  }
+
+  // initial summary
+  if ($donationSummary.length) {
+    $donationSummary.text(formatRupiah(0));
+  }
+});
