@@ -299,3 +299,113 @@ if ($customAmount.length) {
     $donationSummary.text(formatRupiah(0));
   }
 });
+
+$(document).ready(function () {
+  $(".read-more-article").on("click", function (e) {
+    e.preventDefault();
+
+    const title = $(this).data("title");
+    const content = $(this).data("content");
+    const image = $(this).data("image");
+
+    $("#articleModalTitle").text(title);
+    $("#articleModalContent").text(content);
+    $("#articleModalImage").attr("src", image);
+
+    $("#articleModal").removeClass("hidden").addClass("flex");
+  });
+
+  $("#articleClose").on("click", function () {
+    $("#articleModal").addClass("hidden").removeClass("flex");
+  });
+
+  $("#articleModal").on("click", function (e) {
+    if (e.target === this) {
+      $(this).addClass("hidden").removeClass("flex");
+    }
+  });
+
+  function performSearch() {
+    const value = $("#articleSearchInput").val().toLowerCase().trim();
+
+    $(".category-filter")
+      .removeClass("font-bold text-green")
+      .addClass("text-dark-blue");
+    $('.category-filter:contains("Show All")')
+      .addClass("font-bold text-red-500")
+      .removeClass("text-dark-blue");
+
+    $(".article-item").each(function () {
+      const text = $(this).text().toLowerCase();
+      const isMatch = text.indexOf(value) > -1;
+      $(this).toggle(isMatch);
+    });
+  }
+
+  $("#articleSearchInput").on("input", function () {
+    performSearch();
+  });
+
+  $("#articleSearchBtn").on("click", function () {
+    performSearch();
+  });
+
+  function performSearch() {
+    const value = $("#articleSearchInput").val().toLowerCase().trim();
+
+    $(".category-filter")
+      .removeClass("font-bold text-green text-red-500")
+      .addClass("text-dark-blue");
+    $('.category-filter:contains("Show All")')
+      .addClass("font-bold text-red-500")
+      .removeClass("text-dark-blue");
+
+    $(".article-item").each(function () {
+      const text = $(this).text().toLowerCase();
+      const isMatch = text.indexOf(value) > -1;
+      $(this).toggle(isMatch);
+    });
+  }
+
+  $(".category-filter").on("click", function (e) {
+    e.preventDefault();
+
+    const category = $(this).text().trim();
+
+    $(".category-filter").removeClass(
+      "shadow-md font-bold ring-2 ring-offset-2 ring-blue-500 ring-pink-500 ring-green-500"
+    );
+
+    $('.category-filter:not(:contains("Show All"))').addClass("text-dark-blue");
+    $('.category-filter:contains("Show All")').addClass("text-red-500");
+    if (category === "Show All") {
+      $(this).addClass("font-bold text-red-500");
+
+      $("#articleSearchInput").val("");
+
+      $(".article-item").show();
+    } else {
+      $(this).addClass("shadow-md font-bold ring-2 ring-offset-2");
+
+      if (category === "Tips") {
+        $(this).addClass("ring-blue-500").removeClass("text-dark-blue");
+      } else if (category === "Health") {
+        $(this).addClass("ring-pink-500").removeClass("text-dark-blue");
+      } else {
+        $(this).addClass("ring-green-500").removeClass("text-dark-blue");
+      }
+
+      $("#articleSearchInput").val("");
+
+      $(".article-item").each(function () {
+        const articleText = $(this).text();
+
+        if (articleText.includes(category)) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
+    }
+  });
+});

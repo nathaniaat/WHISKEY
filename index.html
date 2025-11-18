@@ -508,7 +508,7 @@
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div class="lg:col-span-2 space-y-8">
-              <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <article class="article-item bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div class="lg:flex">
                   <img
                     src="img/kucingMakan.png"
@@ -535,17 +535,21 @@
                           >Health</span
                         >
                       </div>
-                      <a
-                        href="#"
-                        class="btn-outline-green px-4 py-2 rounded-full"
-                        >Read More</a
+                      <a 
+                          href="#"
+                          class="btn-outline-green px-4 py-2 rounded-full read-more-article"
+                          data-title="Apa saja makanan yang tidak boleh dimakan kucing?"
+                          data-content="Ini dia 5 makanan yang dikira menyehatkan tetapi malah dilarang untuk dimakan oleh kucing! (lanjutan panjang di sini...)"
+                          data-image="img/kucingMakan.png"
                       >
+                          Read More
+                      </a>
                     </div>
                   </div>
                 </div>
               </article>
 
-              <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <article class="article-item bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div class="lg:flex">
                   <img
                     src="img/tipsmerawatkucing.png"
@@ -571,11 +575,15 @@
                           >Tips</span
                         >
                       </div>
-                      <a
-                        href="#"
-                        class="btn-outline-green px-4 py-2 rounded-full"
-                        >Read More</a
+                      <a 
+                          href="#"
+                          class="btn-outline-green px-4 py-2 rounded-full read-more-article"
+                          data-title="Tips Merawat Kucing dengan Baik"
+                          data-content="Penjelasan lengkap tentang cara merawat kucing blablabla..."
+                          data-image="img/tipsmerawatkucing.png"
                       >
+                          Read More
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -597,31 +605,40 @@
                 <div class="flex gap-2">
                   <input
                     type="search"
+                    id="articleSearchInput" 
                     placeholder="Search..."
                     class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-green focus:ring-green"
                   />
-                  <button class="btn-green px-4 py-2 rounded-lg">Go</button>
+                  <button id="articleSearchBtn" class="btn-green px-4 py-2 rounded-lg">Go</button>
                 </div>
               </div>
 
               <!-- Categories Filter-->
               <div class="bg-white p-6 rounded-2xl shadow-lg">
                 <h4 class="bodyTxt text-xl mb-4 font-semibold">Categories</h4>
-                <ul class="space-y-2 text-sm">
-                  <li>
-                    <a href="#" class="text-dark-blue hover:text-green">Tips</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-dark-blue hover:text-green"
-                      >Health</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="text-dark-blue hover:text-green"
-                      >Behavior</a
-                    >
-                  </li>
-                </ul>
+                
+                <div class="grid grid-cols-2 gap-3 text-sm"> 
+                    
+                    <a 
+                        href="#" 
+                        class="category-filter bg-soft-blue text-dark-blue text-center hover:opacity-80 px-3 py-2 rounded-full transition"
+                    >Tips</a>
+                    
+                    <a 
+                        href="#" 
+                        class="category-filter bg-soft-pink text-dark-blue text-center hover:opacity-80 px-3 py-2 rounded-full transition"
+                    >Health</a>
+                    
+                    <a 
+                        href="#" 
+                        class="category-filter bg-gray-100 text-dark-blue text-center hover:opacity-80 px-3 py-2 rounded-full transition"
+                    >Behavior</a>
+                    
+                    <a 
+                        href="#" 
+                        class="category-filter text-red-500 hover:text-red-700 font-bold text-center transition px-3 py-2 rounded-full"
+                    >Show All</a>
+                </div>
               </div>
             </aside>
           </div>
@@ -842,6 +859,16 @@
         </form>
       </div>
     </div>
+
+    <!-- modal article -->
+    <div id="articleModal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-[200]">
+      <div class="bg-white w-11/12 md:w-2/3 lg:w-1/2 p-6 rounded-2xl shadow-xl relative max-h-[90vh] overflow-y-auto flex flex-col items-center">
+        <button id="articleClose" class="absolute top-3 right-3 text-2xl hover:text-red-500 transition">&times;</button>
+        <img id="articleModalImage" src="" class="w-full max-h-64 object-contain rounded-lg mb-4"/>
+        <h2 id="articleModalTitle" class="headerTxt700 text-2xl mb-3 text-center"></h2>
+        <p id="articleModalContent" class="bodyTxt text-gray-700 leading-relaxed text-left"></p>
+      </div>
+    </div>  
     <!-- ---------- MODAL ENDS ---------- -->
   </body>
 </html>
