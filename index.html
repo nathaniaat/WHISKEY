@@ -117,7 +117,7 @@
         </div>
       </header>
     </section>
-    <script src="script.js"></script>
+    
     <!--HEADER ENDS-->
 
     <!--ABOUT US SECTION-->
@@ -297,7 +297,7 @@
             class="w-full lg:w-1/2 z-10 text-center lg:text-left py-12 lg:py-0 flex justify-center lg:justify-end"
           >
             <div class="max-w-lg lg:mr-16 px-6 lg:px-0 pb-12 lg:pb-0">
-              <h1 class="text-6xl mb-2 headerTxt700 title-whiskey">Donate</h1>
+              <h1 class="text-6xl mb-2 headerTxt700 title-whiskey">Help Us Save More Cats</h1>
               <h2 class="subheaderTxt font-semibold lg:text-2xl mb-4">
                 Setiap Hari Ada Kumis yang Butuh Uluran Tanganmu
               </h2>
@@ -312,14 +312,15 @@
                   id="donate_btnDonateHero"
                   class="btn-green font-semibold px-6 py-2 rounded-full shadow-lg"
                 >
-                  Donate
+                  Make a Donation
                 </button>
                 <button
-                  onclick="window.location.href='contact.html'"
+                  id="scrollToContact"
                   class="btn-outline-green font-semibold px-6 py-2 rounded-full"
                 >
                   Contact Us
                 </button>
+
               </div>
             </div>
           </div>
@@ -388,8 +389,17 @@
       </section>
 
       <!-- 3. DONATION FORM SECTION  -->
-      <section class="pb-16 donation-process-section" id="donationFormSection">
-        <div class="max-w-3xl mx-auto px-4 text-center">
+      <div id="donationModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+
+      <div class="bg-white p-8 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+
+        <button id="closeDonationModal"
+          class="absolute top-4 right-4 text-black hover:text-red-500 text-3xl">
+          ×
+        </button>
+
+      <div class="max-w-3xl mx-auto px-4 text-center">
           <h2 class="headerTxt700 text-3xl mb-4">Dukung Misi Kami</h2>
           <p class="bodyTxt text-lg mb-8">
             Pilih jumlah donasi Anda di bawah atau masukkan jumlah kustom.
@@ -455,19 +465,19 @@
             >
               <button
                 class="donate-payment-btn btn-outline-green border px-4 py-2 rounded-lg"
-                data-method="BCA"
+                data-method="1234567890 (BCA)"
               >
                 BCA
               </button>
               <button
                 class="donate-payment-btn btn-outline-green border px-4 py-2 rounded-lg"
-                data-method="MANDIRI"
+                data-method="1234567890 (Mandiri)"
               >
                 Mandiri
               </button>
               <button
                 class="donate-payment-btn btn-outline-green border px-4 py-2 rounded-lg"
-                data-method="OVO"
+                data-method="081234567890 (OVO/Gopay)"
               >
                 OVO/Gopay
               </button>
@@ -476,22 +486,60 @@
               id="donate_paymentMethodSummary"
               class="bodyTxt mt-4 text-gray-600"
             >
-              Metode dipilih: -
+              No Rekening: -
             </p>
 
+          <!-- Upload Bukti Pembayaran -->
+          <div class="mt-8 text-center">
+          <label class="headerTxt400 text-xl mb-3 block">
+            Upload Bukti Pembayaran
+          </label>
+
+          <div class="flex justify-center">
+            <div class="file-wrapper">
+              <span class="file-button">Choose File</span>
+              <input 
+                type="file" 
+                id="proofUpload" 
+                class="file-input-custom"
+                accept="image/*,application/pdf"
+              />
+            </div>
+          </div>
+            <p id="uploadedFileName" class="mt-3 text-sm text-gray-700"></p>
             <button
               id="donate_btnCheckoutFinal"
               class="btn-green font-bold px-8 py-3 rounded-full mt-8 w-full transition duration-300 disabled:opacity-100"
               disabled
             >
-              Lanjutkan Pembayaran
+              Submit Donation
             </button>
           </div>
         </div>
       </section>
     </section>
 
-   
+    <!-- SUCCESS MODAL -->
+    <div id="successModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+
+      <div class="bg-white p-8 rounded-2xl shadow-2xl text-center max-w-md w-full relative">
+
+        <h2 class="headerTxt700 text-2xl mb-4">Pembayaran Berhasil!</h2>
+        <p class="bodyTxt mb-6">
+          Terima kasih atas donasi Anda. Bantuan Anda sangat berarti bagi para kucing.
+        </p>
+
+        <button id="closeSuccessModal"
+          class="btn-green px-6 py-3 rounded-full font-bold">
+          Tutup
+        </button>
+
+      </div>
+    </div>
+
+    <!-- ---------- DONATION SECTION ENDS ---------- -->
+ 
 
     <!-- ---------- EDUCATION SECTION STARTS ---------- -->
     <section id="educationPage" class="py-16 bg-soft-pink pt-24 pb-24">

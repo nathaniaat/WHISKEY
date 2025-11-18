@@ -103,3 +103,59 @@ footer {
     padding-top: 2rem;
   }
 }
+
+#proofUpload {
+  cursor: pointer;
+}
+
+#uploadedFileName {
+  font-style: italic;
+}
+
+
+/* Wrapper untuk memotong tampilan input */
+.file-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* Input aslinya */
+.file-input-custom {
+  font-size: 100px;        /* supaya teks bawaan bergeser jauh */
+  opacity: 0;              /* sembunyikan input sebenarnya */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Tombol custom */
+.file-button {
+  padding: 10px 20px;
+  border: 1px solid #4caf50;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: 0.2s;
+  display: inline-block;
+}
+
+.file-button:hover {
+  background: #e8f5e9;
+}
+
+
+.file-input-custom::file-selector-button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #4caf50;
+  background: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+
+.file-input-custom::file-selector-button:hover {
+  background: #e8f5e9;
+}
+

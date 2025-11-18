@@ -121,7 +121,7 @@ $(document).ready(function () {
       closeModal("#adoptionFormModal");
       this.reset();
     });
-  } // End initializeModalHandlers
+  } 
 
   // Fungsi untuk menutup modal
   function closeModal(modalSelector) {
@@ -182,6 +182,55 @@ $(document).ready(function () {
   const $paymentButtons = $("#donate_paymentButtonsContainer .donate-payment-btn");
   const $btnCheckout = $("#donate_btnCheckoutFinal");
   const $btnDonateHero = $("#donate_btnDonateHero");
+
+  function resetDonationForm() {
+      // Reset amount
+      currentAmount = 0;
+      $donationSummary.text(formatRupiah(0));
+
+      // Reset preset buttons
+      $("#donate_donationOptions .option-btn")
+        .removeClass("btn-green border-green")
+        .addClass("btn-outline-green");
+
+      // Reset custom input
+      $customAmount.val("");
+
+      // Reset payment method
+      currentMethod = "";
+      $paymentMethodSummary.text("No Rekening: -");
+
+      $paymentButtons
+        .removeClass("btn-green")
+        .addClass("btn-outline-green");
+
+      // Reset file upload
+      proofInput.value = "";
+      fileNameDisplay.textContent = "";
+
+      // Disable checkout button
+      updateCheckoutButton();
+    }
+
+  const scrollBtn = document.getElementById("scrollToContact");
+  const contactSection = document.getElementById("contact");
+
+  if (scrollBtn && contactSection) {
+    scrollBtn.addEventListener("click", function () {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    });
+  }
+
+
+  const $donationModal = $("#donationModal");
+  $("#donate_btnDonateHero").on("click", function () {
+  $donationModal.removeClass("hidden").addClass("flex");
+  });
+
+  $("#closeDonationModal").on("click", function () {
+    $donationModal.addClass("hidden").removeClass("flex");
+    resetDonationForm();
+  });
 
   let currentAmount = 0;
   let currentMethod = "";
@@ -256,7 +305,7 @@ if ($customAmount.length) {
     $paymentButtons.on("click", function () {
       currentMethod = $(this).data("method");
 
-      $paymentMethodSummary.text("Metode dipilih: " + currentMethod);
+      $paymentMethodSummary.text("No Rekening: " + currentMethod);
 
       $paymentButtons
         .removeClass("btn-green")
@@ -270,35 +319,52 @@ if ($customAmount.length) {
     });
   }
 
-  // --- Scroll to form ---
-  if ($btnDonateHero.length) {
-    $btnDonateHero.on("click", function () {
-      $("#donationFormSection")[0].scrollIntoView({
-        behavior: "smooth",
-      });
+  // --- Upload Bukti Pembayaran ---
+  const proofInput = document.getElementById("proofUpload");
+  const fileNameDisplay = document.getElementById("uploadedFileName");
+
+  if (proofInput) {
+    proofInput.addEventListener("change", function () {
+      const file = this.files[0];
+
+      if (file) {
+        fileNameDisplay.textContent = "File dipilih: " + file.name;
+      } else {
+        fileNameDisplay.textContent = "";
+      }
     });
   }
+
 
   // --- Final checkout button ---
   if ($btnCheckout.length) {
     $btnCheckout.on("click", function () {
       if (currentAmount > 0 && currentMethod) {
-        alert(
-          "Anda akan melanjutkan donasi sebesar " +
-            formatRupiah(currentAmount) +
-            " menggunakan " +
-            currentMethod +
-            ". Terima kasih atas kebaikan Anda!"
-        );
+
+        // tampilkan modal sukses
+        $("#successModal").removeClass("hidden").addClass("flex");
+
+        // tutup modal donasi
+        $("#donationModal").addClass("hidden").removeClass("flex");
+
+        resetDonationForm();
       }
     });
   }
+
+  // --- Close success modal ---
+  $("#closeSuccessModal").on("click", function () {
+    $("#successModal").addClass("hidden").removeClass("flex");
+  });
+
 
   // initial summary
   if ($donationSummary.length) {
     $donationSummary.text(formatRupiah(0));
   }
 });
+
+
 
 $(document).ready(function () {
   $(".read-more-article").on("click", function (e) {
