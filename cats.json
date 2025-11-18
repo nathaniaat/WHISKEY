@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Puti",
+    "age": "2 years",
+    "gender": "Female",
+    "image": "img/puti.jpg",
+    "backstory": "Puti adalah kucing yang pemalu namun penyayang. Ia suka berjemur di dekat jendela dan cocok dengan rumah yang tenang.",
+    "bgColor": "bg-soft-pink",
+    "dataGender": "female"
+  },
+  {
+    "id": 2,
+    "name": "Moka",
+    "age": "2 years",
+    "gender": "Female",
+    "image": "img/moka.jpg",
+    "backstory": "Moka adalah kucing yang penuh energi dan selalu penasaran. Ia membutuhkan banyak mainan dan interaksi aktif setiap hari.",
+    "bgColor": "bg-soft-yellow",
+    "dataGender": "female"
+  },
+  {
+    "id": 3,
+    "name": "Tob",
+    "age": "1 year",
+    "gender": "Male",
+    "image": "img/tob.jpg",
+    "backstory": "Tob sangat tenang dan lembut. Ia suka tidur dan sangat penyabar, menjadikannya teman yang sempurna untuk keluarga.",
+    "bgColor": "bg-soft-pink",
+    "dataGender": "male"
+  },
+  {
+    "id": 4,
+    "name": "Snow",
+    "age": "1 year",
+    "gender": "Male",
+    "image": "img/snow.jpg",
+    "backstory": "Snow diselamatkan dari lingkungan tempat tinggal yang kurang terawat. Saat pertama kali datang ke Whiskey, dia tampak sehat tapi sangat sensitif terhadap lingkungan baru. Snow kucing yang tenang dan cenderung menjaga jarak dari orang asing. Dia butuh waktu dan pendekatan lembut untuk merasa aman.",
+    "bgColor": "bg-soft-yellow",
+    "dataGender": "male"
+  },
+  {
+    "id": 5,
+    "name": "Oreo",
+    "age": "6 months",
+    "gender": "Male",
+    "image": "img/oreo.jpg",
+    "backstory": "Oreo adalah anak kucing yang baru diselamatkan. Dia sangat suka bermain dan butuh teman di rumah barunya.",
+    "bgColor": "bg-soft-pink",
+    "dataGender": "male"
+  },
+  {
+    "id": 6,
+    "name": "Luna",
+    "age": "3 years",
+    "gender": "Female",
+    "image": "img/luna.jpg",
+    "backstory": "Luna adalah kucing senior yang mencari tempat peristirahatan yang damai. Dia butuh kesabaran ekstra dan perhatian lembut.",
+    "bgColor": "bg-soft-yellow",
+    "dataGender": "female"
+  }
+]

@@ -12,42 +12,66 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="cats.json.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <!---------- NAVBAR SECTION ----------->
-    <nav class="flex justify-between items-center w-[92%] mx-auto py-3">
-      <!-- LOGO -->
-      <div>
-        <img class="w-32 cursor-pointer" src="img\Whiskey.png" alt="..." />
-      </div>
+    <nav class="top-0 left-0 w-full bg-white z-50 shadow">
+      <div class="flex justify-between items-center w-[92%] mx-auto py-3">
+        <!-- LOGO -->
+        <div>
+          <img class="w-32 cursor-pointer" src="img\Whiskey.png" alt="..." />
+        </div>
 
-      <!-- MENU BAR -->
-      <div
-        class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 z-20"
-      >
-        <ul
-          class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-semibold text-blue-800"
+        <!-- MENU BAR -->
+        <div
+          class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 z-20"
         >
-          <li><a role="button" class="hover:text-blue-300" id="homeNav">Home</a></li>
-          <li><a role="button" class="hover:text-blue-300" id="aboutNav">About Us</a></li>
-          <li><a role="button" class="hover:text-blue-300" id="adoptNav">Adoption</a></li>
-          <li><a role="button" class="hover:text-blue-300" id="donateNav">Donation</a></li>
-          <li><a role="button" class="hover:text-blue-300" id="eduNav">Education</a></li>
-        </ul>
-      </div>
-      <div class="flex items-center gap-6 md:hidden">
-        <ion-icon
-          onclick="onToggleMenu(this)"
-          name="menu"
-          class="text-3xl cursor-pointer text-blue-800"
-        ></ion-icon>
+          <ul
+            class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 font-semibold text-blue-800"
+          >
+            <li>
+              <a role="button" class="hover:text-blue-300" id="homeNav">Home</a>
+            </li>
+            <li>
+              <a role="button" class="hover:text-blue-300" id="aboutNav"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a role="button" class="hover:text-blue-300" id="adoptNav"
+                >Adoption</a
+              >
+            </li>
+            <li>
+              <a role="button" class="hover:text-blue-300" id="donateNav"
+                >Donation</a
+              >
+            </li>
+            <li>
+              <a role="button" class="hover:text-blue-300" id="eduNav"
+                >Education</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-center gap-6 md:hidden">
+          <ion-icon
+            onclick="onToggleMenu(this)"
+            name="menu"
+            class="text-3xl cursor-pointer text-blue-800"
+          ></ion-icon>
+        </div>
       </div>
     </nav>
 
     <!-- ---------- HEADER SECTION ---------- -->
     <section id="header">
       <header class="pt-16 lg:pt-0 px-4 lg:px-2">
-        <div class="flex flex-col lg:flex-row justify-center items-center w-full">
+        <div
+          class="flex flex-col lg:flex-row justify-center items-center w-full"
+        >
           <div class="w-full lg:w-2/3 lg:mr-16 max-w-lg lg:ml-8">
             <img
               src="img/Whiskey.png"
@@ -60,19 +84,19 @@
             <p
               class="bodyTxt lg:text-md max-w-sm mx-auto lg:max-w-full text-center lg:text-start mb-3"
             >
-              Karena setiap kumis pantas punya tempat untuk bersandar dan bermain
-              dengan damai.
+              Karena setiap kumis pantas punya tempat untuk bersandar dan
+              bermain dengan damai.
             </p>
 
             <div class="flex justify-center lg:justify-start gap-3 pt-2">
               <a
-                href="#donationFormSection"
+                href="#donationPage"
                 class="inline-block btn-green font-semibold px-6 py-2 rounded-full shadow-md"
               >
                 Donate
               </a>
               <a
-                href="#adoptPage"
+                href="#adoptionPage"
                 class="inline-block btn-outline-green font-semibold px-6 py-2 rounded-full"
               >
                 Adopt
@@ -118,7 +142,19 @@
           <p
             class="bodyTxt lg:mx-0 Lg:text-end text-center text-sm lg:text-end leading-relaxed font-normal text-black"
           >
-            Whiskey adalah sebuah inisiatif penyelamatan dan perawatan kucing terlantar yang lahir dari kepedulian seorang guru SMP bernama Bu Widen. Berawal dari niat sederhana untuk memberi makan kucing jalanan di sekitar rumah, Whiskey tumbuh menjadi wadah yang berfokus pada penyelamatan, perawatan, serta penyaluran kucing-kucing yang membutuhkan rumah baru penuh kasih. Sejak masa pandemi, kegiatan kecil ini berkembang pesat. Dengan waktu luang yang lebih banyak, Bu Widen mulai merawat kucing yang sakit, terluka, dan ditelantarkan. Dari sana, lahir sebuah komitmen berkelanjutan untuk memberikan kehidupan yang lebih baik bagi kucing-kucing tanpa tempat berlindung. Hingga kini, Whiskey telah merawat ratusan kucing dan terus berkembang menjadi jembatan antara para penyayang hewan, calon adopter, dan para donatur yang ingin berbuat kebaikan.
+            Whiskey adalah sebuah inisiatif penyelamatan dan perawatan kucing
+            terlantar yang lahir dari kepedulian seorang guru SMP bernama Bu
+            Widen. Berawal dari niat sederhana untuk memberi makan kucing
+            jalanan di sekitar rumah, Whiskey tumbuh menjadi wadah yang berfokus
+            pada penyelamatan, perawatan, serta penyaluran kucing-kucing yang
+            membutuhkan rumah baru penuh kasih. Sejak masa pandemi, kegiatan
+            kecil ini berkembang pesat. Dengan waktu luang yang lebih banyak, Bu
+            Widen mulai merawat kucing yang sakit, terluka, dan ditelantarkan.
+            Dari sana, lahir sebuah komitmen berkelanjutan untuk memberikan
+            kehidupan yang lebih baik bagi kucing-kucing tanpa tempat
+            berlindung. Hingga kini, Whiskey telah merawat ratusan kucing dan
+            terus berkembang menjadi jembatan antara para penyayang hewan, calon
+            adopter, dan para donatur yang ingin berbuat kebaikan.
           </p>
         </div>
       </div>
@@ -134,7 +170,11 @@
           <div
             class="bodyTxt lg:mx-0 Lg:text-end text-center text-sm lg:text-start leading-relaxed font-normal text-black"
           >
-            <p>Menjadi wadah penyelamatan dan perawatan kucing yang penuh kasih dan terpercaya serta menjadi tempat dimana setiap kucing memiliki kesempatan untuk hidup sehat, aman, dan dicintai.</p>
+            <p>
+              Menjadi wadah penyelamatan dan perawatan kucing yang penuh kasih
+              dan terpercaya serta menjadi tempat dimana setiap kucing memiliki
+              kesempatan untuk hidup sehat, aman, dan dicintai.
+            </p>
           </div>
         </div>
         <div class="w-full lg:w-1/2 lg:mr-8 max-w-lg mb-6 lg:mb-0">
@@ -166,19 +206,25 @@
           >
             <ul class="list-disc list-inside">
               <li>
-                Menyelamatkan dan merawat kucing yang terluka dan ditelantarkan agar dapat hidup lebih layak.
+                Menyelamatkan dan merawat kucing yang terluka dan ditelantarkan
+                agar dapat hidup lebih layak.
               </li>
               <li>
-                Menyalurkan kucing yang siap diadopsi kepada keluarga baru yang penuh kasih.
+                Menyalurkan kucing yang siap diadopsi kepada keluarga baru yang
+                penuh kasih.
               </li>
               <li>
-                Mengedukasi masyarakat tentang pentingnya kasih sayang, tanggung jawab, dan sterilisasi hewan peliharaan.
+                Mengedukasi masyarakat tentang pentingnya kasih sayang, tanggung
+                jawab, dan sterilisasi hewan peliharaan.
               </li>
               <li>
-                Mengajak masyarakat untuk berdonasi dan berpartisipasi aktif dalam hal  membantu biaya perawatan dan kebutuhan sehari-hari kucing.
+                Mengajak masyarakat untuk berdonasi dan berpartisipasi aktif
+                dalam hal membantu biaya perawatan dan kebutuhan sehari-hari
+                kucing.
               </li>
               <li>
-                Mendorong perubahan positif terhadap cara pandang masyarakat terhadap hewan jalanan berhak dihargai dan dicintai.
+                Mendorong perubahan positif terhadap cara pandang masyarakat
+                terhadap hewan jalanan berhak dihargai dan dicintai.
               </li>
             </ul>
           </div>
@@ -193,7 +239,6 @@
       class="bg-super-soft-blue w-full py-16 px-6 lg:px-12"
     >
       <div class="max-w-6xl mx-auto">
-        <!-- Section Title -->
         <div class="flex justify-center items-center mb-10">
           <div class="flex-1 flex justify-end">
             <img src="img/pawLeft.png" alt="paw" class="w-16 opacity-80" />
@@ -211,205 +256,46 @@
           </div>
         </div>
 
-        <!-- Filter Buttons -->
         <div class="flex justify-center gap-4 mb-10 text-sm md:text-lg">
           <button
-            class="btn-green px-6 py-2 rounded-full border-2 border-[var(--green)] font-medium transition"
+            class="filter-btn btn-green px-6 py-2 rounded-full border-2 border-[var(--green)] font-medium transition"
+            data-filter="all"
           >
             All Cats
           </button>
           <button
-            class="btn-outline-green px-6 py-2 rounded-full border-2 border-[var(--green)] font-medium transition"
+            class="filter-btn btn-outline-green px-6 py-2 rounded-full border-2 border-[var(--green)] font-medium transition"
+            data-filter="male"
           >
             Male
           </button>
           <button
-            class="btn-outline-green px-6 py-2 rounded-full border-2 border-[var(--green)] font-medium transition"
+            class="filter-btn btn-outline-green px-6 py-2 rounded-full border-2 border-[var(--green)] font-medium transition"
+            data-filter="female"
           >
             Female
           </button>
         </div>
 
-        <!-- Cards -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          <div
-            class="bg-soft-pink rounded-2xl overflow-hidden shadow-lg p-4 hover:shadow-xl transition"
-          >
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlVTWL4dqk9ZokaiRQe0kdV3_dNvkB7A3xTw&s"
-              alt="cat"
-              class="w-full aspect-[4/3] object-cover rounded-xl mb-3"
-            />
-            <p
-              class="text-[var(--dark-blue)] font-semibold text-xl mb-1 text-left"
-            >
-              Puti
-            </p>
-            <div class="flex justify-between items-center text-sm">
-              <p class="text-[var(--dark-blue)] opacity-70">2 years | Female</p>
-              <button class="btn-green px-4 py-1 rounded-full font-medium">
-                View
-              </button>
-            </div>
-          </div>
-
-          <div
-            class="bg-soft-yellow rounded-2xl overflow-hidden shadow-lg p-4 hover:shadow-xl transition"
-          >
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwJ5XNLFrqwPVjLeTtcpCkYG0Sp8tehsc7OgH_BwMyLC2NlCCO-7GA51kQfCsTjwtS_l0&usqp=CAU"
-              alt="cat"
-              class="w-full aspect-[4/3] object-cover rounded-xl mb-3"
-            />
-            <p
-              class="text-[var(--dark-blue)] font-semibold text-xl mb-1 text-left"
-            >
-              Moka
-            </p>
-            <div class="flex justify-between items-center text-sm">
-              <p class="text-[var(--dark-blue)] opacity-70">2 years | Female</p>
-              <button class="btn-green px-4 py-1 rounded-full font-medium">
-                View
-              </button>
-            </div>
-          </div>
-
-          <div
-            class="bg-soft-pink rounded-2xl overflow-hidden shadow-lg p-4 hover:shadow-xl transition"
-          >
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlVTWL4dqk9ZokaiRQe0kdV3_dNvkB7A3xTw&s"
-              alt="cat"
-              class="w-full aspect-[4/3] object-cover rounded-xl mb-3"
-            />
-            <p
-              class="text-[var(--dark-blue)] font-semibold text-xl mb-1 text-left"
-            >
-              Tob
-            </p>
-            <div class="flex justify-between items-center text-sm">
-              <p class="text-[var(--dark-blue)] opacity-70">1 years | Male</p>
-              <button class="btn-green px-4 py-1 rounded-full font-medium">
-                View
-              </button>
-            </div>
-          </div>
-
-          <div
-            class="bg-soft-yellow rounded-2xl overflow-hidden shadow-lg p-4 hover:shadow-xl transition"
-          >
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwJ5XNLFrqwPVjLeTtcpCkYG0Sp8tehsc7OgH_BwMyLC2NlCCO-7GA51kQfCsTjwtS_l0&usqp=CAU"
-              alt="cat"
-              class="w-full aspect-[4/3] object-cover rounded-xl mb-3"
-            />
-            <p
-              class="text-[var(--dark-blue)] font-semibold text-xl mb-1 text-left"
-            >
-              Snow
-            </p>
-            <div class="flex justify-between items-center text-sm">
-              <p class="text-[var(--dark-blue)] opacity-70">1 years | Male</p>
-              <button class="btn-green px-4 py-1 rounded-full font-medium">
-                View
-              </button>
-            </div>
-          </div>
-          <div
-            class="bg-soft-pink rounded-2xl overflow-hidden shadow-lg p-4 hover:shadow-xl transition"
-          >
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlVTWL4dqk9ZokaiRQe0kdV3_dNvkB7A3xTw&s"
-              alt="cat"
-              class="w-full aspect-[4/3] object-cover rounded-xl mb-3"
-            />
-            <p
-              class="text-[var(--dark-blue)] font-semibold text-xl mb-1 text-left"
-            >
-              Cat Name
-            </p>
-            <div class="flex justify-between items-center text-sm">
-              <p class="text-[var(--dark-blue)] opacity-70">Age | Gender</p>
-              <button class="btn-green px-4 py-1 rounded-full font-medium">
-                View
-              </button>
-            </div>
-          </div>
-
-          <div
-            class="bg-soft-yellow rounded-2xl overflow-hidden shadow-lg p-4 hover:shadow-xl transition"
-          >
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwJ5XNLFrqwPVjLeTtcpCkYG0Sp8tehsc7OgH_BwMyLC2NlCCO-7GA51kQfCsTjwtS_l0&usqp=CAU"
-              alt="cat"
-              class="w-full aspect-[4/3] object-cover rounded-xl mb-3"
-            />
-            <p
-              class="text-[var(--dark-blue)] font-semibold text-xl mb-1 text-left"
-            >
-              Cat Name
-            </p>
-            <div class="flex justify-between items-center text-sm">
-              <p class="text-[var(--dark-blue)] opacity-70">Age | Gender</p>
-              <button class="btn-green px-4 py-1 rounded-full font-medium">
-                View
-              </button>
-            </div>
-          </div>
-
-          <div
-            class="bg-soft-pink rounded-2xl overflow-hidden shadow-lg p-4 hover:shadow-xl transition"
-          >
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlVTWL4dqk9ZokaiRQe0kdV3_dNvkB7A3xTw&s"
-              alt="cat"
-              class="w-full aspect-[4/3] object-cover rounded-xl mb-3"
-            />
-            <p
-              class="text-[var(--dark-blue)] font-semibold text-xl mb-1 text-left"
-            >
-              Cat Name
-            </p>
-            <div class="flex justify-between items-center text-sm">
-              <p class="text-[var(--dark-blue)] opacity-70">Age | Gender</p>
-              <button class="btn-green px-4 py-1 rounded-full font-medium">
-                View
-              </button>
-            </div>
-          </div>
-
-          <div
-            class="bg-soft-yellow rounded-2xl overflow-hidden shadow-lg p-4 hover:shadow-xl transition"
-          >
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwJ5XNLFrqwPVjLeTtcpCkYG0Sp8tehsc7OgH_BwMyLC2NlCCO-7GA51kQfCsTjwtS_l0&usqp=CAU"
-              alt="cat"
-              class="w-full aspect-[4/3] object-cover rounded-xl mb-3"
-            />
-            <p
-              class="text-[var(--dark-blue)] font-semibold text-xl mb-1 text-left"
-            >
-              Cat Name
-            </p>
-            <div class="flex justify-between items-center text-sm">
-              <p class="text-[var(--dark-blue)] opacity-70">Age | Gender</p>
-              <button class="btn-green px-4 py-1 rounded-full font-medium">
-                View
-              </button>
-            </div>
-          </div>
-        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-8"></div>
       </div>
     </section>
     <!-- ---------- ADOPTION ENDS ---------- -->
 
     <!-- ---------- DONATION SECTION ---------- -->
-    
+
     <section id="donationPage">
       <!-- 1. HERO SECTION  -->
-      <section id="donationPageHero" class="pt-16 lg:pt-0 hero-whiskey-style bg-soft-blue lg:min-h-[550px]">
-        <div class="flex flex-col lg:flex-row justify-center items-center w-full h-full lg:h-[550px]">
-          <div class="w-full lg:w-1/2 z-10 text-center lg:text-left py-12 lg:py-0 flex justify-center lg:justify-end">
+      <section
+        id="donationPageHero"
+        class="pt-16 lg:pt-0 hero-whiskey-style bg-soft-blue lg:min-h-[550px]"
+      >
+        <div
+          class="flex flex-col lg:flex-row justify-center items-center w-full h-full lg:h-[550px]"
+        >
+          <div
+            class="w-full lg:w-1/2 z-10 text-center lg:text-left py-12 lg:py-0 flex justify-center lg:justify-end"
+          >
             <div class="max-w-lg lg:mr-16 px-6 lg:px-0 pb-12 lg:pb-0">
               <h1 class="text-6xl mb-2 headerTxt700 title-whiskey">Donate</h1>
               <h2 class="subheaderTxt font-semibold lg:text-2xl mb-4">
@@ -480,8 +366,8 @@
                 Porsi Makanan Tiap Bulan
               </p>
               <p class="bodyTxt lg:text-md max-w-sm mx-auto lg:max-w-full mb-8">
-                Setiap rupiah donasimu membantu menyediakan makanan bergizi untuk
-                para kucing shelter.
+                Setiap rupiah donasimu membantu menyediakan makanan bergizi
+                untuk para kucing shelter.
               </p>
             </div>
             <!-- Card 3 -->
@@ -506,9 +392,9 @@
         <div class="max-w-3xl mx-auto px-4 text-center">
           <h2 class="headerTxt700 text-3xl mb-4">Dukung Misi Kami</h2>
           <p class="bodyTxt text-lg mb-8">
-            Pilih jumlah donasi Anda di bawah atau masukkan jumlah kustom. Setiap
-            rupiah sangat berharga untuk makanan, perawatan medis, dan tempat
-            tinggal.
+            Pilih jumlah donasi Anda di bawah atau masukkan jumlah kustom.
+            Setiap rupiah sangat berharga untuk makanan, perawatan medis, dan
+            tempat tinggal.
           </p>
 
           <!-- Pilihan Nominal Donasi -->
@@ -542,7 +428,7 @@
               >Atau masukkan jumlah kustom:</label
             >
             <input
-              type="number"
+              type="text"
               id="donate_customAmount"
               placeholder="Contoh: 75000"
               min="10000"
@@ -551,7 +437,9 @@
           </div>
 
           <!-- Ringkasan & Metode Pembayaran  -->
-          <div class="bg-white p-6 rounded-xl shadow-2xl border border-gray-200">
+          <div
+            class="bg-white p-6 rounded-xl shadow-2xl border border-gray-200"
+          >
             <h3 class="headerTxt400 text-2xl mb-4">Total Donasi Anda:</h3>
             <p
               class="headerTxt700 text-4xl mb-6 text-green"
@@ -603,178 +491,55 @@
       </section>
     </section>
 
-    <!-- 4. JAVASCRIPT KHUSUS DONASI  -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const donate_customAmountInput = document.getElementById(
-          "donate_customAmount"
-        );
-        const donate_donationOptions = document.getElementById(
-          "donate_donationOptions"
-        );
-        const donate_donationSummary = document.getElementById(
-          "donate_donationSummary"
-        );
-        const donate_paymentMethodSummary = document.getElementById(
-          "donate_paymentMethodSummary"
-        );
-        const donate_paymentButtonsContainer = document.getElementById(
-          "donate_paymentButtonsContainer"
-        );
-        const donate_paymentButtons =
-          donate_paymentButtonsContainer.querySelectorAll(
-            ".donate-payment-btn"
-          );
-        const donate_btnCheckoutFinal = document.getElementById(
-          "donate_btnCheckoutFinal"
-        );
-        const donate_btnDonateHero = document.getElementById(
-          "donate_btnDonateHero"
-        );
-
-        let donate_currentAmount = 0;
-        let donate_currentMethod = "";
-
-        const donate_formatRupiah = (amount) => {
-          return new Intl.NumberFormat("id-ID", {
-            style: "currency",
-            currency: "IDR",
-            minimumFractionDigits: 0,
-          }).format(amount);
-        };
-
-        const donate_updateCheckoutButton = () => {
-          if (donate_currentAmount > 0 && donate_currentMethod) {
-            donate_btnCheckoutFinal.disabled = false;
-          } else {
-            donate_btnCheckoutFinal.disabled = true;
-          }
-        };
-
-        const donate_updateAmount = (newAmount) => {
-          donate_currentAmount = newAmount;
-          if (donate_donationSummary) {
-            donate_donationSummary.textContent =
-              donate_formatRupiah(donate_currentAmount);
-          }
-
-          document
-            .querySelectorAll("#donate_donationOptions .option-btn")
-            .forEach((btn) => {
-              btn.classList.remove("btn-green", "border-green");
-              btn.classList.add("btn-outline-green");
-            });
-
-          donate_updateCheckoutButton();
-        };
-
-        if (donate_donationOptions) {
-          donate_donationOptions.addEventListener("click", (e) => {
-            if (e.target.classList.contains("option-btn")) {
-              const amount = parseInt(e.target.dataset.amount);
-              donate_updateAmount(amount);
-              if (donate_customAmountInput) {
-                donate_customAmountInput.value = "";
-              }
-              e.target.classList.remove("btn-outline-green");
-              e.target.classList.add("btn-green", "border-green");
-            }
-          });
-        }
-
-        if (donate_customAmountInput) {
-          donate_customAmountInput.addEventListener("input", (e) => {
-            let amount = parseInt(e.target.value) || 0;
-            if (amount < 10000 && amount !== 0) {
-              amount = 10000;
-              e.target.value = 10000;
-            }
-            donate_updateAmount(amount);
-          });
-        }
-
-        if (donate_paymentButtons) {
-          donate_paymentButtons.forEach((button) => {
-            button.addEventListener("click", () => {
-              donate_currentMethod = button.dataset.method;
-              if (donate_paymentMethodSummary) {
-                donate_paymentMethodSummary.textContent =
-                  "Metode dipilih: " + donate_currentMethod;
-              }
-
-              donate_paymentButtons.forEach((btn) => {
-                btn.classList.remove("btn-green");
-                btn.classList.add("btn-outline-green");
-              });
-              button.classList.remove("btn-outline-green");
-              button.classList.add("btn-green");
-
-              donate_updateCheckoutButton();
-            });
-          });
-        }
-
-        if (donate_btnDonateHero) {
-          donate_btnDonateHero.addEventListener("click", () => {
-            document.getElementById("donationFormSection").scrollIntoView({
-              behavior: "smooth",
-            });
-          });
-        }
-
-        if (donate_btnCheckoutFinal) {
-          donate_btnCheckoutFinal.addEventListener("click", () => {
-            if (donate_currentAmount > 0 && donate_currentMethod) {
-              alert(
-                "Anda akan melanjutkan donasi sebesar " +
-                  donate_formatRupiah(donate_currentAmount) +
-                  " menggunakan " +
-                  donate_currentMethod +
-                  ". Terima kasih atas kebaikan Anda!"
-              );
-            }
-          });
-        }
-
-        if (donate_donationSummary) {
-          donate_donationSummary.textContent = donate_formatRupiah(0);
-        }
-      });
-    </script>
-
-    <!-- ---------- DONATION SECTION ENDS ---------- -->
+   
 
     <!-- ---------- EDUCATION SECTION STARTS ---------- -->
-    <section id="educationPage" class="py-16 bg-soft-pink">
+    <section id="educationPage" class="py-16 bg-soft-pink pt-24 pb-24">
       <div class="max-w-6xl mx-auto px-6">
         <div class="flex flex-col items-center text-center mx-6">
-                
-
           <div class="flex flex-col items-center text-center mx-6">
-            <h2 class="headerTxt700 text-4xl md:text-5xl mb-2">Education Page</h2>
-            <h3 class="headerTxt400 text-2xl -mt-1">Knowledge & Care for Every Cat</h3>
+            <h2 class="headerTxt700 text-4xl md:text-5xl mb-2">
+              Education Page
+            </h2>
+            <h3 class="headerTxt400 text-2xl -mt-1 mb-12">
+              Knowledge & Care for Every Cat
+            </h3>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div class="lg:col-span-2 space-y-8">
               <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div class="lg:flex">
-                  <img src="img/kucingMakan.png" alt="Foto Artikel" class="w-full lg:w-1/3 object-cover aspect-[4/3]"/>
+                  <img
+                    src="img/kucingMakan.png"
+                    alt="Foto Artikel"
+                    class="w-full lg:w-1/3 object-cover aspect-[4/3]"
+                  />
                   <div class="p-6 lg:w-2/3">
                     <div class="flex items-center text-sm text-gray-500 mb-2">
                       <span class="mr-3">12-11-2025</span>
                       <span class="mr-3">•</span>
                       <span>By Writer</span>
                     </div>
-                      <h3 class="text-2xl text-left headerTxt700 mb-2">Apa saja makanan yang tidak boleh dimakan kucing?</h3>
-                      <p class="bodyTxt text-left text-gray-700 mb-4">
-                        Ini dia 5 makanan yang dikira menyehatkan tetapi malah dilarang untuk dimakan oleh kucing!
-                      </p>
+                    <h3 class="text-2xl text-left headerTxt700 mb-2">
+                      Apa saja makanan yang tidak boleh dimakan kucing?
+                    </h3>
+                    <p class="bodyTxt text-left text-gray-700 mb-4">
+                      Ini dia 5 makanan yang dikira menyehatkan tetapi malah
+                      dilarang untuk dimakan oleh kucing!
+                    </p>
                     <div class="flex items-center justify-between">
                       <div class="flex gap-2">
-                        <span class="px-3 py-1 rounded-full text-sm bg-soft-pink text-dark-blue">Health</span>
+                        <span
+                          class="px-3 py-1 rounded-full text-sm bg-soft-pink text-dark-blue"
+                          >Health</span
+                        >
                       </div>
-                      <a href="#" class="btn-outline-green px-4 py-2 rounded-full">Read More</a>
+                      <a
+                        href="#"
+                        class="btn-outline-green px-4 py-2 rounded-full"
+                        >Read More</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -782,38 +547,59 @@
 
               <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div class="lg:flex">
-                  <img src="img/tipsmerawatkucing.png" alt="Foto article" class="w-full lg:w-1/3 object-cover aspect-[4/3]" />
+                  <img
+                    src="img/tipsmerawatkucing.png"
+                    alt="Foto article"
+                    class="w-full lg:w-1/3 object-cover aspect-[4/3]"
+                  />
                   <div class="p-6 lg:w-2/3">
                     <div class="flex items-center text-sm text-gray-500 mb-2">
                       <span class="mr-3">12-11-2025</span>
                       <span class="mr-3">•</span>
                       <span>By Writer</span>
                     </div>
-                    <h3 class="text-2xl text-left headerTxt700 mb-2">Tips Merawat Kucing dengan Baik</h3>
+                    <h3 class="text-2xl text-left headerTxt700 mb-2">
+                      Tips Merawat Kucing dengan Baik
+                    </h3>
                     <p class="bodyTxt text-left text-gray-700 mb-4">
                       Yuk ketahui cara yang benar dalam merawat kucing kamu!
                     </p>
                     <div class="flex items-center justify-between">
                       <div class="flex gap-2">
-                        <span class="px-3 py-1 rounded-full text-sm bg-soft-blue text-dark-blue">Tips</span>
+                        <span
+                          class="px-3 py-1 rounded-full text-sm bg-soft-blue text-dark-blue"
+                          >Tips</span
+                        >
                       </div>
-                      <a href="#" class="btn-outline-green px-4 py-2 rounded-full">Read More</a>
+                      <a
+                        href="#"
+                        class="btn-outline-green px-4 py-2 rounded-full"
+                        >Read More</a
+                      >
                     </div>
                   </div>
                 </div>
               </article>
               <!-- Load more -->
               <div class="text-center mt-4">
-                <button class="btn-green px-6 py-2 rounded-full font-semibold">Load More Articles</button>
+                <button class="btn-green px-6 py-2 rounded-full font-semibold">
+                  Load More Articles
+                </button>
               </div>
             </div>
 
             <aside class="space-y-6">
               <!-- Search -->
               <div class="bg-white p-6 rounded-2xl shadow-lg">
-                <h4 class="bodyTxt text-xl mb-4 font-semibold">Search Articles</h4>
+                <h4 class="bodyTxt text-xl mb-4 font-semibold">
+                  Search Articles
+                </h4>
                 <div class="flex gap-2">
-                  <input type="search" placeholder="Search..." class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-green focus:ring-green" />
+                  <input
+                    type="search"
+                    placeholder="Search..."
+                    class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-green focus:ring-green"
+                  />
                   <button class="btn-green px-4 py-2 rounded-lg">Go</button>
                 </div>
               </div>
@@ -822,16 +608,26 @@
               <div class="bg-white p-6 rounded-2xl shadow-lg">
                 <h4 class="bodyTxt text-xl mb-4 font-semibold">Categories</h4>
                 <ul class="space-y-2 text-sm">
-                  <li><a href="#" class="text-dark-blue hover:text-green">Tips</a></li>
-                  <li><a href="#" class="text-dark-blue hover:text-green">Health</a></li>
-                  <li><a href="#" class="text-dark-blue hover:text-green">Behavior</a></li>
+                  <li>
+                    <a href="#" class="text-dark-blue hover:text-green">Tips</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-dark-blue hover:text-green"
+                      >Health</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-dark-blue hover:text-green"
+                      >Behavior</a
+                    >
+                  </li>
                 </ul>
               </div>
-            </aside>  
+            </aside>
           </div>
         </div>
-      </section>
-    </section> 
+      </div>
+    </section>
     <!-- ---------- EDUCATION SECTION ENDS ---------- -->
 
     <!-- ---------- FOOTER ---------- -->
@@ -873,5 +669,179 @@
       </div>
     </footer>
     <!-- ---------- FOOTER ENDS ---------- -->
+    <!-- ---------- MODAL START ---------- -->
+    <div
+      id="catDetailModal"
+      class="fixed inset-0 bg-gray-600 bg-opacity-75 hidden items-center justify-center z-[100] transition-opacity duration-300"
+    >
+      <div
+        class="bg-white rounded-2xl p-8 max-w-lg w-full m-4 shadow-2xl transform transition-transform duration-300 scale-95"
+      >
+        <div class="flex justify-between items-start mb-4">
+          <h3
+            id="modalCatName"
+            class="headerTxt700 text-3xl text-[var(--dark-blue)]"
+          ></h3>
+          <button
+            class="close-modal-btn text-gray-500 hover:text-gray-700 text-3xl leading-none"
+            data-modal="catDetailModal"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="mb-6">
+          <p class="text-gray-600 mb-2">
+            <span class="font-semibold">Age:</span>
+            <span id="modalCatAge"></span> |
+            <span class="font-semibold">Gender:</span>
+            <span id="modalCatGender"></span>
+          </p>
+          <p class="text-gray-700 mt-4">
+            <span class="font-semibold text-lg block mb-1">Backstory:</span>
+            <span id="modalCatBackstory" class="bodyTxt leading-relaxed"></span>
+          </p>
+        </div>
+        <div class="flex justify-end space-x-3">
+          <button
+            id="openAdoptionFormBtn"
+            class="btn-green px-6 py-2 rounded-full font-medium"
+          >
+            Adopt Me!
+          </button>
+          <button
+            class="close-modal-btn btn-outline-green px-6 py-2 rounded-full font-medium"
+            data-modal="catDetailModal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="adoptionFormModal"
+      class="fixed inset-0 bg-gray-600 bg-opacity-75 hidden items-center justify-center z-[100] transition-opacity duration-300"
+    >
+      <div
+        class="bg-white rounded-2xl p-8 max-w-xl w-full m-4 shadow-2xl transform transition-transform duration-300 scale-95"
+      >
+        <div class="flex justify-between items-start mb-6">
+          <h3 class="headerTxt700 text-3xl text-[var(--dark-blue)]">
+            Adoption Request Form
+          </h3>
+          <button
+            class="close-modal-btn text-gray-500 hover:text-gray-700 text-3xl leading-none"
+            data-modal="adoptionFormModal"
+          >
+            &times;
+          </button>
+        </div>
+        <form id="adoptionForm" class="bodyTxt">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label
+                for="firstName"
+                class="block text-sm font-medium text-gray-700"
+                >First Name</label
+              >
+              <input
+                type="text"
+                id="firstName"
+                required
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:border-green focus:ring-green"
+              />
+            </div>
+            <div>
+              <label
+                for="lastName"
+                class="block text-sm font-medium text-gray-700"
+                >Last Name</label
+              >
+              <input
+                type="text"
+                id="lastName"
+                required
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:border-green focus:ring-green"
+              />
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                required
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:border-green focus:ring-green"
+              />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium text-gray-700"
+                >Phone Number</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                required
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:border-green focus:ring-green"
+              />
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label for="city" class="block text-sm font-medium text-gray-700"
+                >City</label
+              >
+              <input
+                type="text"
+                id="city"
+                required
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:border-green focus:ring-green"
+              />
+            </div>
+            <div>
+              <label
+                for="postalCode"
+                class="block text-sm font-medium text-gray-700"
+                >Postal Code</label
+              >
+              <input
+                type="text"
+                id="postalCode"
+                required
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:border-green focus:ring-green"
+              />
+            </div>
+          </div>
+          <div class="mb-6">
+            <label
+              for="residenceType"
+              class="block text-sm font-medium text-gray-700"
+              >Where do you live?</label
+            >
+            <select
+              id="residenceType"
+              required
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:border-green focus:ring-green"
+            >
+              <option value="">Select an option</option>
+              <option value="apartment">Apartment</option>
+              <option value="house">House</option>
+            </select>
+          </div>
+          <div class="flex justify-end">
+            <button
+              type="submit"
+              class="btn-green px-6 py-2 rounded-full font-medium"
+            >
+              Submit Adoption Request
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- ---------- MODAL ENDS ---------- -->
   </body>
 </html>
