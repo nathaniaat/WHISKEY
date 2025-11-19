@@ -490,3 +490,15 @@ $(document).ready(function () {
     }
   });
 });
+
+function onToggleMenu(e) {
+  // Ambil elemen menu
+  const navLinks = document.querySelector(".nav-links");
+
+  // Ubah posisi menu (turun ke bawah / naik ke atas)
+  // Kita toggle class Tailwind 'top-[9%]' agar menu turun
+  navLinks.classList.toggle("top-[9%]");
+
+  // Ganti ikon: Kalau 'menu' jadi 'close', kalau 'close' jadi 'menu'
+  e.name = e.name === "menu" ? "close" : "menu";
+}
