@@ -357,7 +357,7 @@ $(document).ready(function () {
                     <img src="${article.image}" class="w-full lg:w-1/3 object-cover aspect-[4/3]" />
                     <div class="p-6 lg:w-2/3">
                         <div class="flex items-center text-sm text-gray-500 mb-2">
-                        <span class="mr-3">${article.date}</span> • <span>By ${article.author}</span>
+                        <span class="mr-3">${article.date}</span> • <span class="ml-2">By ${article.author}</span>
                         </div>
                         <h3 class="text-2xl text-left headerTxt700 mb-2">${article.title}</h3>
                         <p class="bodyTxt text-left text-gray-700 mb-4">${article.summary}</p>
@@ -487,6 +487,22 @@ $(document).ready(function () {
         500
       );
       $btn.text("Load More");
+    }
+  });
+
+  $(document).on("click", function (e) {
+    const $menu = $(".nav-links");
+    const $icon = $('ion-icon[onclick="onToggleMenu(this)"]');
+
+    if ($menu.hasClass("top-[9%]")) {
+      if (
+        !$menu.is(e.target) &&
+        $menu.has(e.target).length === 0 &&
+        !$icon.is(e.target)
+      ) {
+        $menu.removeClass("top-[9%]");
+        $icon.attr("name", "menu");
+      }
     }
   });
 });
