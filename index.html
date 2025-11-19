@@ -539,157 +539,87 @@
     </div>
 
     <!-- ---------- DONATION SECTION ENDS ---------- -->
- 
+
+    <!-- EDU HOME STARTS -->
+    <section id="homeArticles" class="py-16 px-6 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="headerTxt700 text-3xl text-dark-blue">Latest Articles</h2>
+          <p class="bodyTxt text-gray-600">Pelajari cara merawat kucing kesayanganmu.</p>
+        </div>
+
+        <div id="home-articles-container" class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10"></div>
+
+        <div class="text-center">
+          <button id="btnGoToEducation" class="btn-outline-green px-8 py-3 rounded-full font-bold text-lg shadow-md hover:shadow-lg transition">
+            View All Articles
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- EDU HOME ENDS -->
 
     <!-- ---------- EDUCATION SECTION STARTS ---------- -->
-    <section id="educationPage" class="py-16 bg-soft-pink pt-24 pb-24">
+    <section id="educationPage" class="py-16 bg-soft-pink pt-10 pb-24">
       <div class="max-w-6xl mx-auto px-6">
-        <div class="flex flex-col items-center text-center mx-6">
-          <div class="flex flex-col items-center text-center mx-6">
-            <h2 class="headerTxt700 text-4xl md:text-5xl mb-2">
-              Education Page
-            </h2>
-            <h3 class="headerTxt400 text-2xl -mt-1 mb-12">
-              Knowledge & Care for Every Cat
-            </h3>
+        
+        <div class="flex flex-col items-center text-center mx-6 mb-12">
+          <h2 class="headerTxt700 text-4xl md:text-5xl mb-2">
+            Education Page
+          </h2>
+          <h3 class="headerTxt400 text-2xl -mt-1">
+            Knowledge & Care for Every Cat
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          <div class="lg:col-span-2 space-y-8">
+            
+            <div id="education-articles-container" class="space-y-8">
+              </div>
+
+            <div class="text-center mt-4">
+              <button id="loadMoreBtn" class="btn-green px-6 py-2 rounded-full font-semibold shadow-md hover:shadow-lg transition">
+                Load More
+              </button>
+            </div>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div class="lg:col-span-2 space-y-8">
-              <article class="article-item bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div class="lg:flex">
-                  <img
-                    src="img/kucingMakan.png"
-                    alt="Foto Artikel"
-                    class="w-full lg:w-1/3 object-cover aspect-[4/3]"
-                  />
-                  <div class="p-6 lg:w-2/3">
-                    <div class="flex items-center text-sm text-gray-500 mb-2">
-                      <span class="mr-3">12-11-2025</span>
-                      <span class="mr-3">•</span>
-                      <span>By Writer</span>
-                    </div>
-                    <h3 class="text-2xl text-left headerTxt700 mb-2">
-                      Apa saja makanan yang tidak boleh dimakan kucing?
-                    </h3>
-                    <p class="bodyTxt text-left text-gray-700 mb-4">
-                      Ini dia 5 makanan yang dikira menyehatkan tetapi malah
-                      dilarang untuk dimakan oleh kucing!
-                    </p>
-                    <div class="flex items-center justify-between">
-                      <div class="flex gap-2">
-                        <span
-                          class="px-3 py-1 rounded-full text-sm bg-soft-pink text-dark-blue"
-                          >Health</span
-                        >
-                      </div>
-                      <a 
-                          href="#"
-                          class="btn-outline-green px-4 py-2 rounded-full read-more-article"
-                          data-title="Apa saja makanan yang tidak boleh dimakan kucing?"
-                          data-content="Ini dia 5 makanan yang dikira menyehatkan tetapi malah dilarang untuk dimakan oleh kucing! (lanjutan panjang di sini...)"
-                          data-image="img/kucingMakan.png"
-                      >
-                          Read More
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="article-item bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div class="lg:flex">
-                  <img
-                    src="img/tipsmerawatkucing.png"
-                    alt="Foto article"
-                    class="w-full lg:w-1/3 object-cover aspect-[4/3]"
-                  />
-                  <div class="p-6 lg:w-2/3">
-                    <div class="flex items-center text-sm text-gray-500 mb-2">
-                      <span class="mr-3">12-11-2025</span>
-                      <span class="mr-3">•</span>
-                      <span>By Writer</span>
-                    </div>
-                    <h3 class="text-2xl text-left headerTxt700 mb-2">
-                      Tips Merawat Kucing dengan Baik
-                    </h3>
-                    <p class="bodyTxt text-left text-gray-700 mb-4">
-                      Yuk ketahui cara yang benar dalam merawat kucing kamu!
-                    </p>
-                    <div class="flex items-center justify-between">
-                      <div class="flex gap-2">
-                        <span
-                          class="px-3 py-1 rounded-full text-sm bg-soft-blue text-dark-blue"
-                          >Tips</span
-                        >
-                      </div>
-                      <a 
-                          href="#"
-                          class="btn-outline-green px-4 py-2 rounded-full read-more-article"
-                          data-title="Tips Merawat Kucing dengan Baik"
-                          data-content="Penjelasan lengkap tentang cara merawat kucing blablabla..."
-                          data-image="img/tipsmerawatkucing.png"
-                      >
-                          Read More
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <!-- Load more -->
-              <div class="text-center mt-4">
-                <button class="btn-green px-6 py-2 rounded-full font-semibold">
-                  Load More Articles
+          <aside class="space-y-6">
+            
+            <div class="bg-white p-6 rounded-2xl shadow-lg">
+              <h4 class="bodyTxt text-xl mb-4 font-semibold">
+                Search Articles
+              </h4>
+              <div class="flex gap-2">
+                <input
+                  type="search"
+                  id="articleSearchInput"
+                  placeholder="Search..."
+                  class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-green focus:ring-green outline-none transition"
+                />
+                <button id="articleSearchBtn" class="btn-green px-4 py-2 rounded-lg font-bold">
+                  Go
                 </button>
               </div>
             </div>
 
-            <aside class="space-y-6">
-              <!-- Search -->
-              <div class="bg-white p-6 rounded-2xl shadow-lg">
-                <h4 class="bodyTxt text-xl mb-4 font-semibold">
-                  Search Articles
-                </h4>
-                <div class="flex gap-2">
-                  <input
-                    type="search"
-                    id="articleSearchInput" 
-                    placeholder="Search..."
-                    class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-green focus:ring-green"
-                  />
-                  <button id="articleSearchBtn" class="btn-green px-4 py-2 rounded-lg">Go</button>
-                </div>
-              </div>
-
-              <!-- Categories Filter-->
-              <div class="bg-white p-6 rounded-2xl shadow-lg">
-                <h4 class="bodyTxt text-xl mb-4 font-semibold">Categories</h4>
+            <div class="bg-white p-6 rounded-2xl shadow-lg">
+              <h4 class="bodyTxt text-xl mb-4 font-semibold">Categories</h4>
+              
+              <div class="grid grid-cols-2 gap-3 text-sm"> 
+                <a href="#" class="category-filter bg-soft-blue text-dark-blue text-center hover:opacity-80 px-3 py-2 rounded-full transition">Tips</a>
                 
-                <div class="grid grid-cols-2 gap-3 text-sm"> 
-                    
-                    <a 
-                        href="#" 
-                        class="category-filter bg-soft-blue text-dark-blue text-center hover:opacity-80 px-3 py-2 rounded-full transition"
-                    >Tips</a>
-                    
-                    <a 
-                        href="#" 
-                        class="category-filter bg-soft-pink text-dark-blue text-center hover:opacity-80 px-3 py-2 rounded-full transition"
-                    >Health</a>
-                    
-                    <a 
-                        href="#" 
-                        class="category-filter bg-gray-100 text-dark-blue text-center hover:opacity-80 px-3 py-2 rounded-full transition"
-                    >Behavior</a>
-                    
-                    <a 
-                        href="#" 
-                        class="category-filter text-red-500 hover:text-red-700 font-bold text-center transition px-3 py-2 rounded-full"
-                    >Show All</a>
-                </div>
+                <a href="#" class="category-filter bg-soft-pink text-dark-blue text-center hover:opacity-80 px-3 py-2 rounded-full transition">Health</a>
+                
+                <a href="#" class="category-filter bg-gray-100 text-dark-blue text-center hover:opacity-80 px-3 py-2 rounded-full transition">Behavior</a>
+                
+                <a href="#" class="category-filter text-red-500 hover:text-red-700 font-bold text-center transition px-3 py-2 rounded-full">Show All</a>
               </div>
-            </aside>
-          </div>
+            </div>
+          </aside>
+
         </div>
       </div>
     </section>

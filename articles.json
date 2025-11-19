@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "title": "Apa saja makanan yang tidak boleh dimakan kucing?",
+    "date": "12-11-2025",
+    "author": "Writer",
+    "category": "Health",
+    "bgColor": "bg-soft-pink",
+    "summary": "Ini dia 5 makanan yang dikira menyehatkan tetapi malah dilarang...",
+    "content": "Ini dia 5 makanan yang dikira menyehatkan tetapi malah dilarang untuk dimakan oleh kucing! Coklat, Anggur, Bawang, Susu Sapi, dan Alkohol adalah musuh utama.",
+    "image": "img/kucingMakan.png"
+  },
+  {
+    "id": 2,
+    "title": "Tips Merawat Kucing dengan Baik",
+    "date": "12-11-2025",
+    "author": "Writer",
+    "category": "Tips",
+    "bgColor": "bg-soft-blue",
+    "summary": "Yuk ketahui cara yang benar dalam merawat kucing kamu!",
+    "content": "Penjelasan lengkap tentang cara merawat kucing, mulai dari grooming rutin, vaksinasi, hingga pemilihan pasir yang tepat.",
+    "image": "img/tipsmerawatkucing.png"
+  },
+  {
+    "id": 3,
+    "title": "Bahasa Ekor Kucing",
+    "date": "10-11-2025",
+    "author": "Writer",
+    "category": "Behavior",
+    "bgColor": "bg-gray-100",
+    "summary": "Ternyata ekor kucing bisa bicara lho! Pahami artinya di sini.",
+    "content": "Ekor tegak berarti senang. Ekor mengembang berarti takut. Ekor berkedut berarti sedang fokus atau kesal.",
+    "image": "img/artikelEkorKucing.avif"
+  }
+]
