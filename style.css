@@ -188,12 +188,6 @@ footer {
     font-size: 0.95rem !important;
   }
 
-  /* Navbar link sizing */
-  .nav-links ul {
-    gap: 0.8rem !important;
-    font-size: 0.95rem !important;
-  }
-
   /* Donation hero adjustments */
   #donationPageHero .max-w-lg {
     padding-left: 1rem !important;

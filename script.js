@@ -161,7 +161,7 @@ $(document).ready(function () {
     .removeClass("btn-outline-green")
     .addClass("btn-green");
 
-  // DONATION 
+  // DONATION
   const $customAmount = $("#donate_customAmount");
   const $donationOptions = $("#donate_donationOptions");
   const $donationSummary = $("#donate_donationSummary");
@@ -494,13 +494,13 @@ $(document).ready(function () {
     const $menu = $(".nav-links");
     const $icon = $('ion-icon[onclick="onToggleMenu(this)"]');
 
-    if ($menu.hasClass("top-[9%]")) {
+    if ($menu.hasClass("top-[56px]")) {
       if (
         !$menu.is(e.target) &&
         $menu.has(e.target).length === 0 &&
         !$icon.is(e.target)
       ) {
-        $menu.removeClass("top-[9%]");
+        $menu.removeClass("top-[56px]").addClass("top-[-100%]");
         $icon.attr("name", "menu");
       }
     }
@@ -509,6 +509,6 @@ $(document).ready(function () {
 
 function onToggleMenu(e) {
   const navLinks = document.querySelector(".nav-links");
-  navLinks.classList.toggle("top-[9%]");
+  navLinks.classList.toggle("top-[56px]");
   e.name = e.name === "menu" ? "close" : "menu";
 }
